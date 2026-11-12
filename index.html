@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-radius="soft" data-ground="sand">
+<html lang="pt-BR" class="dark" data-radius="soft" data-ground="obsidian">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -19,13 +19,26 @@
         extend: {
           colors: {
             nl: {
-              burgundy: '#141210',
-              dark: '#0B0A09',
-              deeper: '#060505',
-              gold: '#C8A25A',
-              goldlight: '#E5C888',
-              cream: '#FAF8F5',
-              sand: '#F3EFEA'
+              burgundy: '#D4AF37',
+              dark: '#0D0B09',
+              deeper: '#060504',
+              gold: '#D4AF37',
+              goldlight: '#F3E5AB',
+              cream: '#0C0B09',
+              sand: '#14120F'
+            },
+            slate: {
+              50: '#FBF8F1',
+              100: '#F5EFE0',
+              200: '#E6D8B8',
+              300: '#D4C29A',
+              400: '#A89876',
+              500: '#8A7B5E',
+              600: '#6E6047',
+              700: '#2A241B',
+              800: '#1A1612',
+              900: '#110F0C',
+              950: '#080706'
             }
           },
           fontFamily: {
@@ -56,7 +69,7 @@
       --p-surface-muted: #F2ECE1;
       --p-ink: #161412;
       --p-muted: #645D55;
-      --p-accent: #141210;
+      --p-accent: #181511;
       --p-accent-ink: #ffffff;
       --p-gold: #C8A25A;
       --p-gold-light: #E5C888;
@@ -79,7 +92,7 @@
       background-color: var(--p-bg);
       background-image:
         radial-gradient(1100px 420px at 50% -120px, rgba(200, 162, 90, 0.15), transparent 72%),
-        radial-gradient(850px 340px at 92% 0%, rgba(20, 18, 16, 0.05), transparent 70%);
+        radial-gradient(850px 340px at 92% 0%, rgba(212, 175, 55, 0.05), transparent 70%);
       background-attachment: fixed;
       color: var(--p-ink);
       overflow-x: hidden;
@@ -89,7 +102,7 @@
       background-color: #090d14;
       background-image:
         radial-gradient(1000px 380px at 50% -120px, rgba(200, 162, 90, 0.08), transparent 70%),
-        radial-gradient(800px 320px at 90% 0%, rgba(20, 18, 16, 0.16), transparent 70%);
+        radial-gradient(800px 320px at 90% 0%, rgba(212, 175, 55, 0.16), transparent 70%);
       color: #f1f5f9;
     }
 
@@ -129,8 +142,8 @@
       transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease), background-color var(--dur) var(--ease);
     }
     input:not([type="checkbox"]):not([type="file"]):focus, select:focus, textarea:focus {
-      border-color: #141210 !important;
-      box-shadow: 0 0 0 3px rgba(20, 18, 16, 0.12), 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+      border-color: #181511 !important;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12), 0 1px 2px rgba(0, 0, 0, 0.04) !important;
       outline: none !important;
     }
     .dark input:not([type="checkbox"]):not([type="file"]):focus, .dark select:focus, .dark textarea:focus {
@@ -191,14 +204,14 @@
       height: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: rgba(20, 18, 16, 0.04);
+      background: rgba(212, 175, 55, 0.04);
     }
     ::-webkit-scrollbar-thumb {
-      background: rgba(20, 18, 16, 0.22);
+      background: rgba(212, 175, 55, 0.22);
       border-radius: 999px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: rgba(20, 18, 16, 0.42);
+      background: rgba(212, 175, 55, 0.42);
     }
 
     @keyframes fadeSlideUp {
@@ -211,7 +224,7 @@
 
     /* Sombras e acabamentos refinados */
     .shadow-luxury {
-      box-shadow: 0 4px 20px -2px rgba(20, 18, 16, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
     }
 
     /* Pipeline Path 7 Etapas (Swiss / Editorial Stepper) */
@@ -265,10 +278,10 @@
       border-color: rgba(200, 162, 90, 0.35);
     }
     .nl-pipeline-step.active {
-      background: linear-gradient(135deg, #141210 0%, #0B0A08 100%);
+      background: linear-gradient(135deg, #181511 0%, #0A0907 100%);
       color: #FFFFFF;
       border-color: #DFB96E;
-      box-shadow: 0 10px 22px -6px rgba(20, 18, 16, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+      box-shadow: 0 10px 22px -6px rgba(212, 175, 55, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.22);
       transform: translateY(-2px);
     }
 
@@ -286,12 +299,12 @@
       border-radius: 9999px;
     }
     .custom-kanban-scroll::-webkit-scrollbar-thumb {
-      background: linear-gradient(90deg, #141210, #C8A25A);
+      background: linear-gradient(90deg, #181511, #C8A25A);
       border-radius: 9999px;
       cursor: pointer;
     }
     .custom-kanban-scroll::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(90deg, #26211B, #DFB96E);
+      background: linear-gradient(90deg, #D4AF37, #DFB96E);
     }
     .custom-kanban-scroll {
       scrollbar-width: auto;
@@ -302,7 +315,7 @@
     .kanban-task-card { border-left-width: 3px !important; }
     .kanban-task-card[data-prio="Urgente"] { border-left-color: #E11D48 !important; }
     .kanban-task-card[data-prio="Alta"] { border-left-color: #C8A25A !important; }
-    .kanban-task-card[data-prio="Média"] { border-left-color: #141210 !important; }
+    .kanban-task-card[data-prio="Média"] { border-left-color: #181511 !important; }
     .kanban-task-card[data-prio="Baixa"] { border-left-color: #10B981 !important; }
 
     /* Blocos internos dinâmicos (CRM, Pipeline, Financeiro, DataJud) */
@@ -360,9 +373,104 @@
       scrollbar-width: thin !important;
       scrollbar-color: rgba(200, 162, 90, 0.4) transparent !important;
     }
+
+    /* =========================================================================
+       TEMA EXCLUSIVO DR. DARCY LUIZ: PRETO ÔNIX & DOURADO IMPERIAL
+       ========================================================================= */
+    :root, .dark {
+      --p-bg: #080706 !important;
+      --p-surface: #12100D !important;
+      --p-surface-muted: #1A1713 !important;
+      --p-ink: #F7F2E7 !important;
+      --p-muted: #B5A482 !important;
+      --p-accent: #D4AF37 !important;
+      --p-accent-ink: #080706 !important;
+      --p-gold: #D4AF37 !important;
+      --p-gold-light: #F3E5AB !important;
+    }
+
+    body, .dark body {
+      background-color: #080706 !important;
+      background-image:
+        radial-gradient(1100px 460px at 50% -100px, rgba(212, 175, 55, 0.18), transparent 72%),
+        radial-gradient(850px 380px at 90% 0%, rgba(212, 175, 55, 0.10), transparent 70%) !important;
+      color: #F5EFE2 !important;
+    }
+
+    /* Superfícies, Cards e Painéis em Preto Nobre com Borda Dourada */
+    #admin-portal, #client-portal {
+      background-color: #080706 !important;
+    }
+
+    .nl-bento-card,
+    .admin-view > div.bg-white,
+    .admin-view .grid > div.bg-white,
+    #client-portal main > div.bg-white,
+    #portal-processos-container > div.bg-white,
+    #modal-content-box {
+      background: linear-gradient(180deg, #15120E 0%, #0E0C0A 100%) !important;
+      border: 1px solid rgba(212, 175, 55, 0.36) !important;
+      box-shadow: 0 20px 42px -15px rgba(0, 0, 0, 0.85), 0 0 18px -6px rgba(212, 175, 55, 0.12), inset 0 1px 0 rgba(243, 229, 171, 0.12) !important;
+      color: #F5EFE2 !important;
+    }
+
+    /* Botões de Ação Principal em Ouro Metálico com Texto Preto Forte */
+    #btn-login-submit {
+      background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #AA801E 100%) !important;
+      color: #090807 !important;
+      border-color: #F3E5AB !important;
+      box-shadow: 0 12px 28px -6px rgba(212, 175, 55, 0.45) !important;
+      font-weight: 800 !important;
+    }
+    #btn-login-submit i, #btn-login-submit svg {
+      color: #090807 !important;
+    }
+
+    /* Destaque Dourado nos itens ativos do Menu Lateral */
+    .admin-nav-btn.bg-white\/15,
+    .admin-nav-btn[class*="bg-[#"] {
+      background: linear-gradient(90deg, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.08) 100%) !important;
+      border-left: 3px solid #D4AF37 !important;
+      color: #F3E5AB !important;
+    }
+
+    /* Etapas ativas da Pipeline em Ouro & Preto */
+    .nl-pipeline-track {
+      background: #0D0B09 !important;
+      border: 1px solid rgba(212, 175, 55, 0.35) !important;
+    }
+    .nl-pipeline-step {
+      background: #16130F !important;
+      color: #B5A482 !important;
+      border: 1px solid rgba(212, 175, 55, 0.22) !important;
+    }
+    .nl-pipeline-step.completed {
+      background: rgba(212, 175, 55, 0.14) !important;
+      color: #F3E5AB !important;
+      border-color: rgba(212, 175, 55, 0.5) !important;
+    }
+    .nl-pipeline-step.active {
+      background: linear-gradient(135deg, #D4AF37 0%, #AA801E 100%) !important;
+      color: #080706 !important;
+      border-color: #F3E5AB !important;
+      box-shadow: 0 10px 24px -6px rgba(212, 175, 55, 0.45) !important;
+      font-weight: 800 !important;
+    }
+
+    /* Inputs e Selects em Preto Grafite com Foco Dourado */
+    input:not([type="checkbox"]):not([type="file"]), select, textarea {
+      background-color: #16130F !important;
+      border-color: rgba(212, 175, 55, 0.32) !important;
+      color: #F7F2E7 !important;
+    }
+    input:not([type="checkbox"]):not([type="file"]):focus, select:focus, textarea:focus {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.24) !important;
+    }
+
   </style>
 </head>
-<body class="min-h-[100dvh] antialiased selection:bg-[#141210] selection:text-white">
+<body class="min-h-[100dvh] antialiased selection:bg-[#181511] selection:text-white">
 
   <!-- Toast Notification Container -->
   <div id="toast-container" class="fixed top-4 right-4 z-[100] flex flex-col gap-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
@@ -370,7 +478,7 @@
   <!-- =========================================================================
        1. TELA DE LOGIN INSTITUCIONAL (QUADRO ÚNICO CENTRALIZADO - BOUTIQUE LEGALTECH)
        ========================================================================= -->
-  <div id="login-screen" class="min-h-[100dvh] flex items-center justify-center p-4 sm:p-6 bg-[#080706] relative overflow-hidden" style="background-image: radial-gradient(900px 500px at 50% 42%, rgba(200, 162, 90, 0.16), transparent 70%), radial-gradient(1200px 700px at 50% 100%, rgba(212, 175, 55, 0.18), transparent 75%), linear-gradient(160deg, #050504 0%, #0E0D0B 52%, #181512 100%);">
+  <div id="login-screen" class="min-h-[100dvh] flex items-center justify-center p-4 sm:p-6 bg-[#070605] relative overflow-hidden" style="background-image: radial-gradient(900px 500px at 50% 42%, rgba(200, 162, 90, 0.16), transparent 70%), radial-gradient(1200px 700px at 50% 100%, rgba(212, 175, 55, 0.22), transparent 75%), linear-gradient(160deg, #050404 0%, #0D0B09 52%, #171410 100%);">
     <!-- Halo arquitetural sutil -->
     <div class="absolute -top-36 -left-36 w-96 h-96 rounded-full bg-[#C8A25A]/12 blur-3xl pointer-events-none"></div>
     <div class="absolute -bottom-36 -right-36 w-96 h-96 rounded-full bg-[#C8A25A]/12 blur-3xl pointer-events-none"></div>
@@ -378,13 +486,13 @@
     <div id="login-brand-panel" class="hidden"></div>
 
     <!-- Único Quadro de Login Centralizado -->
-    <div class="w-full max-w-[430px] mx-auto bg-[#FCFBF9]/98 dark:bg-slate-900/95 backdrop-blur-2xl rounded-[28px] border border-[#E5C888]/45 dark:border-slate-800 shadow-[0_32px_70px_-16px_rgba(5,5,4,0.72),inset_0_1px_0_rgba(255,255,255,0.9)] overflow-hidden relative z-10">
+    <div class="w-full max-w-[430px] mx-auto bg-[#110F0C]/98 backdrop-blur-2xl rounded-[28px] border-2 border-[#D4AF37]/65 shadow-[0_32px_80px_-12px_rgba(0,0,0,0.92),0_0_35px_-8px_rgba(212,175,55,0.22)] overflow-hidden relative z-10">
       <!-- Filete superior dourado acetinado -->
       <div class="h-1.5 w-full bg-gradient-to-r from-[#7D5A20] via-[#E5C888] to-[#7D5A20]"></div>
 
       <div class="p-7 sm:p-9">
         <div class="flex flex-col items-center text-center mb-7">
-          <div class="bg-[#0D0C0A] rounded-2xl p-2 shadow-[0_14px_34px_-6px_rgba(0,0,0,0.65)] inline-block mb-4 border border-[#D4AF37]/60 ring-4 ring-[#D4AF37]/15">
+          <div class="bg-[#0A0908] rounded-2xl p-2 shadow-[0_14px_34px_-6px_rgba(0,0,0,0.85)] inline-block mb-4 border border-[#D4AF37]/70 ring-4 ring-[#D4AF37]/15">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMjQwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjI0MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0Y3RTVBOSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjM1JSIgc3RvcC1jb2xvcj0iI0Q0QUYzNyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI0FBODAxRSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGM0RDOTIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTcxNTEyIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBBMDkwOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciIHg9Ii0xMCUiIHk9Ii0xMCUiIHdpZHRoPSIxMjAlIiBoZWlnaHQ9IjEyMCUiPgogICAgICA8ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMiIgc3RkRGV2aWF0aW9uPSIzIiBmbG9vZC1jb2xvcj0iIzAwMDAwMCIgZmxvb2Qtb3BhY2l0eT0iMC43Ii8+CiAgICA8L2ZpbHRlcj4KICA8L2RlZnM+CgogIDwhLS0gRnVuZG8gUHJldG8gT2JzaWRpYW4gTHV4byBjb20gTW9sZHVyYSBEdXBsYSBEb3VyYWRhIC0tPgogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSI1OTIiIGhlaWdodD0iMjMyIiByeD0iMjAiIGZpbGw9InVybCgjYmdHcmFkKSIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICA8cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSI1NzYiIGhlaWdodD0iMjE2IiByeD0iMTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkR3JhZCkiIHN0cm9rZS13aWR0aD0iMC44IiBzdHJva2Utb3BhY2l0eT0iMC40NSIvPgoKICA8IS0tIEJyYXPDo28gU3VwZXJpb3I6IEJhbGFuw6dhIGRhIEp1c3Rpw6dhICsgTW9ub2dyYW1hIERMIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMCwgNjYpIiBmaWx0ZXI9InVybCgjZ2xvdykiPgogICAgPCEtLSBFc2N1ZG8gT2N0b2dvbmFsIC8gTW9sZHVyYSBkbyBCcmFzw6NvIC0tPgogICAgPHBvbHlnb24gcG9pbnRzPSIwLC00MiAzNiwtMjIgMzYsMjAgMCw0MCAtMzYsMjAgLTM2LC0yMiIgZmlsbD0iIzEyMTAwRSIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cG9seWdvbiBwb2ludHM9IjAsLTM2IDMxLC0xOCAzMSwxNiAwLDM0IC0zMSwxNiAtMzEsLTE4IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZEdyYWQpIiBzdHJva2Utd2lkdGg9IjAuNyIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIvPgoKICAgIDwhLS0gUGlsYXIgQ2VudHJhbCBlIEJhbGFuw6dhIGRhIEp1c3Rpw6dhIC0tPgogICAgPGxpbmUgeDE9IjAiIHkxPSItMjgiIHgyPSIwIiB5Mj0iMjIiIHN0cm9rZT0idXJsKCNnb2xkR3JhZCkiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgICA8cG9seWdvbiBwb2ludHM9Ii0xMCwyMiAxMCwyMiAxNCwyNiAtMTQsMjYiIGZpbGw9InVybCgjZ29sZEdyYWQpIi8+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iLTI4IiByPSIyLjgiIGZpbGw9InVybCgjZ29sZEdyYWQpIi8+CiAgICA8cGF0aCBkPSJNIC0yMCwtMTggUSAwLC0yNCAyMCwtMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkR3JhZCkiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgICA8IS0tIFByYXRvIEVzcXVlcmRvIC0tPgogICAgPGxpbmUgeDE9Ii0yMCIgeTE9Ii0xOCIgeDI9Ii0yNCIgeTI9Ii02IiBzdHJva2U9InVybCgjZ29sZEdyYWQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxsaW5lIHgxPSItMjAiIHkxPSItMTgiIHgyPSItMTYiIHkyPSItNiIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8cGF0aCBkPSJNIC0yNiwtNiBRIC0yMCwwIC0xNCwtNiBaIiBmaWxsPSJ1cmwoI2dvbGRHcmFkKSIvPgogICAgPCEtLSBQcmF0byBEaXJlaXRvIC0tPgogICAgPGxpbmUgeDE9IjIwIiB5MT0iLTE4IiB4Mj0iMTYiIHkyPSItNiIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8bGluZSB4MT0iMjAiIHkxPSItMTgiIHgyPSIyNCIgeTI9Ii02IiBzdHJva2U9InVybCgjZ29sZEdyYWQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxwYXRoIGQ9Ik0gMTQsLTYgUSAyMCwwIDI2LC02IFoiIGZpbGw9InVybCgjZ29sZEdyYWQpIi8+CgogICAgPCEtLSBNb25vZ3JhbWEgREwgQ2VudHJhbGl6YWRvIC0tPgogICAgPHRleHQgeD0iMCIgeT0iMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnQ29ybW9yYW50IEdhcmFtb25kJywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0idXJsKCNnb2xkR3JhZCkiIGxldHRlci1zcGFjaW5nPSIxIj5ETDwvdGV4dD4KICA8L2c+CgogIDwhLS0gTm9tZSBQcmluY2lwYWw6IERBUkNZIExVSVogLS0+CiAgPHRleHQgeD0iMzAwIiB5PSIxNTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnQ29ybW9yYW50IEdhcmFtb25kJywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmIiBmb250LXNpemU9IjM4IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ1cmwoI2dvbGRHcmFkKSIgbGV0dGVyLXNwYWNpbmc9IjYiIGZpbHRlcj0idXJsKCNnbG93KSI+REFSQ1kgTFVJWjwvdGV4dD4KCiAgPCEtLSBEaXZpc29yIE9ybmFtZW50YWwgRG91cmFkbyAtLT4KICA8bGluZSB4MT0iMTMwIiB5MT0iMTcwIiB4Mj0iMjg2IiB5Mj0iMTcwIiBzdHJva2U9InVybCgjZ29sZEdyYWQpIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjciLz4KICA8cG9seWdvbiBwb2ludHM9IjMwMCwxNjUgMzA1LDE3MCAzMDAsMTc1IDI5NSwxNzAiIGZpbGw9InVybCgjZ29sZEdyYWQpIi8+CiAgPGxpbmUgeDE9IjMxNCIgeTE9IjE3MCIgeDI9IjQ3MCIgeTI9IjE3MCIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+CgogIDwhLS0gU3VidMOtdHVsbyBJbnN0aXR1Y2lvbmFsIC0tPgogIDx0ZXh0IHg9IjMwMCIgeT0iMTk4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ091dGZpdCcsICdQbHVzIEpha2FydGEgU2FucycsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyLjUiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNFNUM4ODgiIGxldHRlci1zcGFjaW5nPSI1LjUiPkFEVk9DQUNJQSAmYW1wOyBDT05TVUxUT1JJQSBKVVLDjURJQ0E8L3RleHQ+Cjwvc3ZnPg==" alt="Darcy Luiz Advocacia & Consultoria Jurídica" class="h-20 sm:h-24 w-auto object-contain mx-auto">
           </div>
           <span class="text-[10px] font-extrabold uppercase tracking-[0.22em] text-[#7A541B] dark:text-[#E5C888] bg-[#FAF3E3] dark:bg-slate-800 border border-[#C8A25A]/35 px-3 py-1 rounded-full">
@@ -419,7 +527,7 @@
               <input id="login-password" type="password" autocomplete="current-password" placeholder="••••••"
                 class="w-full pl-10 pr-10 py-3 rounded-xl border border-stone-300/90 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-medium text-slate-900 dark:text-white placeholder:text-slate-400 shadow-2xs">
               <button type="button" onclick="const inp=document.getElementById('login-password'); inp.type=inp.type==='password'?'text':'password';"
-                class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#141210] dark:hover:text-slate-200 p-1" title="Mostrar/Ocultar Palavra-passe">
+                class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-[#181511] dark:hover:text-slate-200 p-1" title="Mostrar/Ocultar Palavra-passe">
                 <i data-lucide="eye" class="w-4 h-4"></i>
               </button>
             </div>
@@ -432,19 +540,19 @@
           <div id="login-error" class="hidden text-xs font-semibold text-red-700 bg-red-50 border border-red-200 rounded-xl p-3"></div>
 
           <button id="btn-login-submit" type="submit"
-            class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-[#141210] via-[#1A1714] to-[#0D0B0A] hover:brightness-110 text-white font-bold text-sm border border-[#C8A25A]/45 shadow-[0_12px_24px_-6px_rgba(20,18,16,0.45)] flex items-center justify-center gap-2 cursor-pointer">
+            class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-[#181511] via-[#1A1612] to-[#0C0A08] hover:brightness-110 text-white font-bold text-sm border border-[#C8A25A]/45 shadow-[0_12px_24px_-6px_rgba(212,175,55,0.45)] flex items-center justify-center gap-2 cursor-pointer">
             <i data-lucide="log-in" class="w-4 h-4 text-[#E5C888]"></i> Entrar na Plataforma
           </button>
-                  <div class="pt-2 border-t border-stone-200/60 dark:border-slate-800/80">
-            <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400 text-center mb-2">Acesso Rápido Demonstrativo (1 Clique)</div>
+                  <div class="pt-3 border-t border-[#D4AF37]/25">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-[#E5C888]/80 text-center mb-2">Acesso Rápido Demonstrativo (1 Clique)</div>
             <div class="grid grid-cols-2 gap-2">
               <button type="button" onclick="quickLogin('@darcyluiz', '123456')"
-                class="py-2 px-3 rounded-xl bg-[#141210] hover:bg-[#1F1C18] text-[#E5C888] border border-[#D4AF37]/50 text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                class="py-2.5 px-3 rounded-xl bg-[#1A1612] hover:bg-[#262019] text-[#F3E5AB] border border-[#D4AF37]/60 text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-sm cursor-pointer">
                 <i data-lucide="scale" class="w-3.5 h-3.5 text-[#D4AF37]"></i> Painel Dr. Darcy
               </button>
               <button type="button" onclick="quickLogin('@henrique', '123456')"
-                class="py-2 px-3 rounded-xl bg-stone-100 hover:bg-stone-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-[#C8A25A]/40 text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
-                <i data-lucide="user-check" class="w-3.5 h-3.5 text-[#8C6B32]"></i> Visão Cliente
+                class="py-2.5 px-3 rounded-xl bg-[#14120F] hover:bg-[#211C16] text-[#E5C888] border border-[#C8A25A]/40 text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-sm cursor-pointer">
+                <i data-lucide="user-check" class="w-3.5 h-3.5 text-[#C8A25A]"></i> Visão Cliente
               </button>
             </div>
           </div>
@@ -464,19 +572,19 @@
   <div id="admin-portal" class="hidden min-h-[100dvh] flex flex-col lg:flex-row bg-[#FAF8F5] dark:bg-slate-950">
 
     <!-- Topbar Mobile (Hambúrguer) -->
-    <header class="lg:hidden sticky top-0 z-40 bg-[#0B0A09] text-white px-4 py-3 flex items-center justify-between shadow-md">
+    <header class="lg:hidden sticky top-0 z-40 bg-[#0D0B09] text-white px-4 py-3 flex items-center justify-between shadow-md">
       <div class="flex items-center gap-2.5">
         <button type="button" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white" aria-label="Abrir Menu">
           <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgMTYwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRHcmFkSWNvbiIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0U1QTkiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9IiNENEFGMzciLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNBQTgwMUUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRjNEQzkyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWRJY29uIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQTE3MTQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDkwODA3Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgcng9IjI4IiBmaWxsPSJ1cmwoI2JnR3JhZEljb24pIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1Ii8+CgogIDwhLS0gQmFsYW7Dp2Egbm8gVG9wbyAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MCwgNDYpIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSItMTQiIHI9IjMuNSIgZmlsbD0idXJsKCNnb2xkR3JhZEljb24pIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9Ii0xNCIgeDI9IjAiIHkyPSIxMiIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMi4yIi8+CiAgICA8cGF0aCBkPSJNIC0yOCwtNCBRIDAsLTEyIDI4LC00IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIyLjIiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0zMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0yMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxwYXRoIGQ9Ik0gLTM2LDEwIFEgLTI4LDE3IC0yMCwxMCBaIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiLz4KICAgIDxsaW5lIHgxPSIyOCIgeTE9Ii00IiB4Mj0iMjMiIHkyPSIxMCIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMS4zIi8+CiAgICA8bGluZSB4MT0iMjgiIHkxPSItNCIgeDI9IjMzIiB5Mj0iMTAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuMyIvPgogICAgPHBhdGggZD0iTSAyMCwxMCBRIDI4LDE3IDM2LDEwIFoiIGZpbGw9InVybCgjZ29sZEdyYWRJY29uKSIvPgogIDwvZz4KCiAgPCEtLSBNb25vZ3JhbWEgREwgUHJpbmNpcGFsIC0tPgogIDx0ZXh0IHg9IjgwIiB5PSIxMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnQ29ybW9yYW50IEdhcmFtb25kJywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiIGxldHRlci1zcGFjaW5nPSIyIj5ETDwvdGV4dD4KICA8bGluZSB4MT0iNDIiIHkxPSIxMzAiIHgyPSIxMTgiIHkyPSIxMzAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNzUiLz4KPC9zdmc+" alt="DL" class="w-8 h-8 rounded-lg bg-[#0D0C0A] p-0.5 border border-[#D4AF37]/50 object-contain">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgMTYwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRHcmFkSWNvbiIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0U1QTkiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9IiNENEFGMzciLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNBQTgwMUUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRjNEQzkyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWRJY29uIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQTE3MTQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDkwODA3Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgcng9IjI4IiBmaWxsPSJ1cmwoI2JnR3JhZEljb24pIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1Ii8+CgogIDwhLS0gQmFsYW7Dp2Egbm8gVG9wbyAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MCwgNDYpIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSItMTQiIHI9IjMuNSIgZmlsbD0idXJsKCNnb2xkR3JhZEljb24pIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9Ii0xNCIgeDI9IjAiIHkyPSIxMiIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMi4yIi8+CiAgICA8cGF0aCBkPSJNIC0yOCwtNCBRIDAsLTEyIDI4LC00IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIyLjIiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0zMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0yMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxwYXRoIGQ9Ik0gLTM2LDEwIFEgLTI4LDE3IC0yMCwxMCBaIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiLz4KICAgIDxsaW5lIHgxPSIyOCIgeTE9Ii00IiB4Mj0iMjMiIHkyPSIxMCIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMS4zIi8+CiAgICA8bGluZSB4MT0iMjgiIHkxPSItNCIgeDI9IjMzIiB5Mj0iMTAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuMyIvPgogICAgPHBhdGggZD0iTSAyMCwxMCBRIDI4LDE3IDM2LDEwIFoiIGZpbGw9InVybCgjZ29sZEdyYWRJY29uKSIvPgogIDwvZz4KCiAgPCEtLSBNb25vZ3JhbWEgREwgUHJpbmNpcGFsIC0tPgogIDx0ZXh0IHg9IjgwIiB5PSIxMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnQ29ybW9yYW50IEdhcmFtb25kJywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiIGxldHRlci1zcGFjaW5nPSIyIj5ETDwvdGV4dD4KICA8bGluZSB4MT0iNDIiIHkxPSIxMzAiIHgyPSIxMTgiIHkyPSIxMzAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNzUiLz4KPC9zdmc+" alt="DL" class="w-8 h-8 rounded-lg bg-[#0A0908] p-0.5 border border-[#D4AF37]/60 object-contain">
         <div>
           <div class="text-xs font-bold tracking-wide text-[#E5C888] leading-none">DARCY LUIZ</div>
           <div class="text-[10px] text-[#E5C888]/80">ADVOCACIA & CONSULTORIA JURÍDICA</div>
         </div>
       </div>
       <div class="flex items-center gap-2">
-        <button type="button" onclick="openClientPreviewModal()" class="px-2.5 py-1.5 rounded-lg bg-[#C8A25A] text-[#060505] font-bold text-xs flex items-center gap-1">
+        <button type="button" onclick="openClientPreviewModal()" class="px-2.5 py-1.5 rounded-lg bg-[#C8A25A] text-[#060504] font-bold text-xs flex items-center gap-1">
           <i data-lucide="eye" class="w-3.5 h-3.5"></i> Portal Cliente
         </button>
         <button type="button" onclick="handleLogout()" class="p-2 rounded-lg bg-white/10 text-[#E5C888]" title="Sair">
@@ -488,11 +596,11 @@
     <!-- Drawer Mobile Colapsável -->
     <div id="mobile-drawer" class="fixed inset-0 z-50 hidden lg:hidden">
       <div class="fixed inset-0 bg-black/60 backdrop-blur-xs" onclick="toggleMobileMenu()"></div>
-      <aside class="relative w-72 max-w-[85vw] h-full bg-[#0B0A09] text-white flex flex-col justify-between p-5 overflow-y-auto z-10">
+      <aside class="relative w-72 max-w-[85vw] h-full bg-[#0D0B09] text-white flex flex-col justify-between p-5 overflow-y-auto z-10">
         <div>
           <div class="flex items-center justify-between pb-4 border-b border-white/10">
             <div class="flex items-center gap-2.5">
-              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgMTYwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRHcmFkSWNvbiIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0U1QTkiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9IiNENEFGMzciLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNBQTgwMUUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRjNEQzkyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWRJY29uIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQTE3MTQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDkwODA3Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgcng9IjI4IiBmaWxsPSJ1cmwoI2JnR3JhZEljb24pIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1Ii8+CgogIDwhLS0gQmFsYW7Dp2Egbm8gVG9wbyAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MCwgNDYpIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSItMTQiIHI9IjMuNSIgZmlsbD0idXJsKCNnb2xkR3JhZEljb24pIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9Ii0xNCIgeDI9IjAiIHkyPSIxMiIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMi4yIi8+CiAgICA8cGF0aCBkPSJNIC0yOCwtNCBRIDAsLTEyIDI4LC00IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIyLjIiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0zMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0yMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxwYXRoIGQ9Ik0gLTM2LDEwIFEgLTI4LDE3IC0yMCwxMCBaIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiLz4KICAgIDxsaW5lIHgxPSIyOCIgeTE9Ii00IiB4Mj0iMjMiIHkyPSIxMCIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMS4zIi8+CiAgICA8bGluZSB4MT0iMjgiIHkxPSItNCIgeDI9IjMzIiB5Mj0iMTAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuMyIvPgogICAgPHBhdGggZD0iTSAyMCwxMCBRIDI4LDE3IDM2LDEwIFoiIGZpbGw9InVybCgjZ29sZEdyYWRJY29uKSIvPgogIDwvZz4KCiAgPCEtLSBNb25vZ3JhbWEgREwgUHJpbmNpcGFsIC0tPgogIDx0ZXh0IHg9IjgwIiB5PSIxMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnQ29ybW9yYW50IEdhcmFtb25kJywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiIGxldHRlci1zcGFjaW5nPSIyIj5ETDwvdGV4dD4KICA8bGluZSB4MT0iNDIiIHkxPSIxMzAiIHgyPSIxMTgiIHkyPSIxMzAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNzUiLz4KPC9zdmc+" alt="DL" class="w-10 h-10 rounded-xl bg-[#0D0C0A] p-0.5 border border-[#D4AF37]/50 object-contain">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgMTYwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRHcmFkSWNvbiIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0U1QTkiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9IiNENEFGMzciLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNBQTgwMUUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRjNEQzkyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWRJY29uIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQTE3MTQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDkwODA3Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgcng9IjI4IiBmaWxsPSJ1cmwoI2JnR3JhZEljb24pIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1Ii8+CgogIDwhLS0gQmFsYW7Dp2Egbm8gVG9wbyAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MCwgNDYpIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSItMTQiIHI9IjMuNSIgZmlsbD0idXJsKCNnb2xkR3JhZEljb24pIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9Ii0xNCIgeDI9IjAiIHkyPSIxMiIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMi4yIi8+CiAgICA8cGF0aCBkPSJNIC0yOCwtNCBRIDAsLTEyIDI4LC00IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIyLjIiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0zMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0yMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxwYXRoIGQ9Ik0gLTM2LDEwIFEgLTI4LDE3IC0yMCwxMCBaIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiLz4KICAgIDxsaW5lIHgxPSIyOCIgeTE9Ii00IiB4Mj0iMjMiIHkyPSIxMCIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMS4zIi8+CiAgICA8bGluZSB4MT0iMjgiIHkxPSItNCIgeDI9IjMzIiB5Mj0iMTAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuMyIvPgogICAgPHBhdGggZD0iTSAyMCwxMCBRIDI4LDE3IDM2LDEwIFoiIGZpbGw9InVybCgjZ29sZEdyYWRJY29uKSIvPgogIDwvZz4KCiAgPCEtLSBNb25vZ3JhbWEgREwgUHJpbmNpcGFsIC0tPgogIDx0ZXh0IHg9IjgwIiB5PSIxMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnQ29ybW9yYW50IEdhcmFtb25kJywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiIGxldHRlci1zcGFjaW5nPSIyIj5ETDwvdGV4dD4KICA8bGluZSB4MT0iNDIiIHkxPSIxMzAiIHgyPSIxMTgiIHkyPSIxMzAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNzUiLz4KPC9zdmc+" alt="DL" class="w-10 h-10 rounded-xl bg-[#0A0908] p-0.5 border border-[#D4AF37]/60 object-contain">
               <div>
                 <div class="font-editorial font-bold text-base text-[#E5C888]">Darcy Luiz</div>
                 <div class="text-[10px] text-[#E5C888]/70">Advocacia & Consultoria</div>
@@ -553,7 +661,7 @@
     <div id="desktop-sidebar-hotspot" onmouseenter="openDesktopSidebar()" class="hidden lg:block fixed top-0 left-0 w-8 h-24 z-30 pointer-events-auto" title="Passe o cursor ou clique para abrir o menu"></div>
 
     <!-- Sidebar Flutuante / Retrátil (Desktop & Mobile) -->
-    <aside id="desktop-sidebar" onmouseenter="handleSidebarMouseEnter()" onmouseleave="handleSidebarMouseLeave()" class="fixed inset-y-0 left-0 z-50 h-[100dvh] max-h-screen w-76 sm:w-80 max-w-[88vw] flex flex-col bg-gradient-to-b from-[#0B0A09] via-[#0C0B09] to-[#070605] text-white border-r border-[#C8A25A]/30 shadow-2xl transition-transform duration-300 ease-in-out -translate-x-full select-none overscroll-contain">
+    <aside id="desktop-sidebar" onmouseenter="handleSidebarMouseEnter()" onmouseleave="handleSidebarMouseLeave()" class="fixed inset-y-0 left-0 z-50 h-[100dvh] max-h-screen w-76 sm:w-80 max-w-[88vw] flex flex-col bg-gradient-to-b from-[#0D0B09] via-[#0B0A08] to-[#060504] text-white border-r border-[#C8A25A]/30 shadow-2xl transition-transform duration-300 ease-in-out -translate-x-full select-none overscroll-contain">
       <div class="p-4 sm:p-5 border-b border-white/10">
         <!-- Barra de Ações Superior (Fixar / Fechar) -->
         <div class="flex items-center justify-between pb-3">
@@ -570,7 +678,7 @@
         </div>
 
         <!-- Card Branco com Logo Destaque e Bem Maior -->
-        <div class="bg-[#0D0C0A] rounded-2xl p-2.5 shadow-lg border border-[#D4AF37]/50 flex items-center justify-center">
+        <div class="bg-[#0A0908] rounded-2xl p-2.5 shadow-lg border border-[#D4AF37]/60 flex items-center justify-center">
           <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMjQwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjI0MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRHcmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0Y3RTVBOSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjM1JSIgc3RvcC1jb2xvcj0iI0Q0QUYzNyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI0FBODAxRSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGM0RDOTIiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnR3JhZCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTcxNTEyIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBBMDkwOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ciIHg9Ii0xMCUiIHk9Ii0xMCUiIHdpZHRoPSIxMjAlIiBoZWlnaHQ9IjEyMCUiPgogICAgICA8ZmVEcm9wU2hhZG93IGR4PSIwIiBkeT0iMiIgc3RkRGV2aWF0aW9uPSIzIiBmbG9vZC1jb2xvcj0iIzAwMDAwMCIgZmxvb2Qtb3BhY2l0eT0iMC43Ii8+CiAgICA8L2ZpbHRlcj4KICA8L2RlZnM+CgogIDwhLS0gRnVuZG8gUHJldG8gT2JzaWRpYW4gTHV4byBjb20gTW9sZHVyYSBEdXBsYSBEb3VyYWRhIC0tPgogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSI1OTIiIGhlaWdodD0iMjMyIiByeD0iMjAiIGZpbGw9InVybCgjYmdHcmFkKSIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICA8cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSI1NzYiIGhlaWdodD0iMjE2IiByeD0iMTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkR3JhZCkiIHN0cm9rZS13aWR0aD0iMC44IiBzdHJva2Utb3BhY2l0eT0iMC40NSIvPgoKICA8IS0tIEJyYXPDo28gU3VwZXJpb3I6IEJhbGFuw6dhIGRhIEp1c3Rpw6dhICsgTW9ub2dyYW1hIERMIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMCwgNjYpIiBmaWx0ZXI9InVybCgjZ2xvdykiPgogICAgPCEtLSBFc2N1ZG8gT2N0b2dvbmFsIC8gTW9sZHVyYSBkbyBCcmFzw6NvIC0tPgogICAgPHBvbHlnb24gcG9pbnRzPSIwLC00MiAzNiwtMjIgMzYsMjAgMCw0MCAtMzYsMjAgLTM2LC0yMiIgZmlsbD0iIzEyMTAwRSIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cG9seWdvbiBwb2ludHM9IjAsLTM2IDMxLC0xOCAzMSwxNiAwLDM0IC0zMSwxNiAtMzEsLTE4IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZEdyYWQpIiBzdHJva2Utd2lkdGg9IjAuNyIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIvPgoKICAgIDwhLS0gUGlsYXIgQ2VudHJhbCBlIEJhbGFuw6dhIGRhIEp1c3Rpw6dhIC0tPgogICAgPGxpbmUgeDE9IjAiIHkxPSItMjgiIHgyPSIwIiB5Mj0iMjIiIHN0cm9rZT0idXJsKCNnb2xkR3JhZCkiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgICA8cG9seWdvbiBwb2ludHM9Ii0xMCwyMiAxMCwyMiAxNCwyNiAtMTQsMjYiIGZpbGw9InVybCgjZ29sZEdyYWQpIi8+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iLTI4IiByPSIyLjgiIGZpbGw9InVybCgjZ29sZEdyYWQpIi8+CiAgICA8cGF0aCBkPSJNIC0yMCwtMTggUSAwLC0yNCAyMCwtMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkR3JhZCkiIHN0cm9rZS13aWR0aD0iMS44Ii8+CiAgICA8IS0tIFByYXRvIEVzcXVlcmRvIC0tPgogICAgPGxpbmUgeDE9Ii0yMCIgeTE9Ii0xOCIgeDI9Ii0yNCIgeTI9Ii02IiBzdHJva2U9InVybCgjZ29sZEdyYWQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxsaW5lIHgxPSItMjAiIHkxPSItMTgiIHgyPSItMTYiIHkyPSItNiIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8cGF0aCBkPSJNIC0yNiwtNiBRIC0yMCwwIC0xNCwtNiBaIiBmaWxsPSJ1cmwoI2dvbGRHcmFkKSIvPgogICAgPCEtLSBQcmF0byBEaXJlaXRvIC0tPgogICAgPGxpbmUgeDE9IjIwIiB5MT0iLTE4IiB4Mj0iMTYiIHkyPSItNiIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8bGluZSB4MT0iMjAiIHkxPSItMTgiIHgyPSIyNCIgeTI9Ii02IiBzdHJva2U9InVybCgjZ29sZEdyYWQpIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDxwYXRoIGQ9Ik0gMTQsLTYgUSAyMCwwIDI2LC02IFoiIGZpbGw9InVybCgjZ29sZEdyYWQpIi8+CgogICAgPCEtLSBNb25vZ3JhbWEgREwgQ2VudHJhbGl6YWRvIC0tPgogICAgPHRleHQgeD0iMCIgeT0iMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnQ29ybW9yYW50IEdhcmFtb25kJywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmIiBmb250LXNpemU9IjIyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0idXJsKCNnb2xkR3JhZCkiIGxldHRlci1zcGFjaW5nPSIxIj5ETDwvdGV4dD4KICA8L2c+CgogIDwhLS0gTm9tZSBQcmluY2lwYWw6IERBUkNZIExVSVogLS0+CiAgPHRleHQgeD0iMzAwIiB5PSIxNTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnQ29ybW9yYW50IEdhcmFtb25kJywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmIiBmb250LXNpemU9IjM4IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ1cmwoI2dvbGRHcmFkKSIgbGV0dGVyLXNwYWNpbmc9IjYiIGZpbHRlcj0idXJsKCNnbG93KSI+REFSQ1kgTFVJWjwvdGV4dD4KCiAgPCEtLSBEaXZpc29yIE9ybmFtZW50YWwgRG91cmFkbyAtLT4KICA8bGluZSB4MT0iMTMwIiB5MT0iMTcwIiB4Mj0iMjg2IiB5Mj0iMTcwIiBzdHJva2U9InVybCgjZ29sZEdyYWQpIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjciLz4KICA8cG9seWdvbiBwb2ludHM9IjMwMCwxNjUgMzA1LDE3MCAzMDAsMTc1IDI5NSwxNzAiIGZpbGw9InVybCgjZ29sZEdyYWQpIi8+CiAgPGxpbmUgeDE9IjMxNCIgeTE9IjE3MCIgeDI9IjQ3MCIgeTI9IjE3MCIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkKSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2Utb3BhY2l0eT0iMC43Ii8+CgogIDwhLS0gU3VidMOtdHVsbyBJbnN0aXR1Y2lvbmFsIC0tPgogIDx0ZXh0IHg9IjMwMCIgeT0iMTk4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ091dGZpdCcsICdQbHVzIEpha2FydGEgU2FucycsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyLjUiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNFNUM4ODgiIGxldHRlci1zcGFjaW5nPSI1LjUiPkFEVk9DQUNJQSAmYW1wOyBDT05TVUxUT1JJQSBKVVLDjURJQ0E8L3RleHQ+Cjwvc3ZnPg==" alt="Darcy Luiz Advocacia" class="h-20 sm:h-24 w-auto object-contain">
         </div>
       </div>
@@ -624,13 +732,13 @@
       <!-- Rodapé da Sidebar -->
       <div class="p-4 border-t border-white/10 bg-black/20 space-y-2.5">
         <button type="button" onclick="openClientPreviewModal()"
-          class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#C8A25A] to-[#DFB96E] text-[#060505] font-extrabold text-xs shadow-md hover:brightness-105 transition flex items-center justify-center gap-2">
+          class="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#C8A25A] to-[#DFB96E] text-[#060504] font-extrabold text-xs shadow-md hover:brightness-105 transition flex items-center justify-center gap-2">
           <i data-lucide="external-link" class="w-4 h-4"></i> Testar Visão do Cliente
         </button>
 
         <div class="flex items-center justify-between pt-1">
           <div class="flex items-center gap-2 min-w-0">
-            <div class="w-8 h-8 rounded-full bg-[#141210] border border-[#C8A25A] flex items-center justify-center text-xs font-bold text-[#E5C888]">DL</div>
+            <div class="w-8 h-8 rounded-full bg-[#181511] border border-[#C8A25A] flex items-center justify-center text-xs font-bold text-[#E5C888]">DL</div>
             <div class="truncate">
               <div id="sidebar-user-name" class="text-xs font-bold text-white truncate">Dr. Darcy Luiz</div>
               <div class="text-[10px] text-[#E5C888]">Advogado Titular</div>
@@ -654,7 +762,7 @@
       <div class="sticky top-0 z-20 bg-[#F8F5EF]/88 dark:bg-slate-950/88 backdrop-blur-xl border-b border-[#C8A25A]/30 dark:border-slate-800 px-4 sm:px-8 py-3.5 flex flex-wrap items-center justify-between gap-3 shadow-[0_4px_20px_-6px_rgba(62,14,16,0.05)]">
         <div class="flex items-center gap-3.5">
           <!-- Botão Menu no Canto Superior Esquerdo (Ativa por hover ou clique) -->
-          <button type="button" id="btn-desktop-menu" onclick="toggleDesktopSidebar(event)" onmouseenter="openDesktopSidebar()" class="px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-[#141210] via-[#1A1714] to-[#0D0B0A] hover:brightness-110 text-white shadow-[0_6px_16px_-4px_rgba(20,18,16,0.35)] border border-[#C8A25A]/45 flex items-center gap-2 cursor-pointer transition-all group" title="Passe o cursor ou clique para abrir o Menu">
+          <button type="button" id="btn-desktop-menu" onclick="toggleDesktopSidebar(event)" onmouseenter="openDesktopSidebar()" class="px-3.5 py-2.5 rounded-xl bg-gradient-to-r from-[#181511] via-[#1A1612] to-[#0C0A08] hover:brightness-110 text-white shadow-[0_6px_16px_-4px_rgba(212,175,55,0.35)] border border-[#C8A25A]/45 flex items-center gap-2 cursor-pointer transition-all group" title="Passe o cursor ou clique para abrir o Menu">
             <i data-lucide="menu" class="w-4 h-4 text-[#E5C888] group-hover:scale-110 transition-transform"></i>
             <span class="text-xs font-bold tracking-wide text-[#FAF8F5]">Menu</span>
           </button>
@@ -676,12 +784,12 @@
 
         <div class="flex items-center gap-2">
           <button type="button" onclick="refreshAllData()" class="px-3.5 py-2 rounded-xl border border-[#C8A25A]/35 dark:border-slate-700 bg-white dark:bg-slate-900 hover:bg-[#FAF5EB] text-xs font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5 shadow-2xs">
-            <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-[#141210] dark:text-[#E5C888]"></i> Atualizar Nuvem
+            <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-[#181511] dark:text-[#E5C888]"></i> Atualizar Nuvem
           </button>
-          <button type="button" onclick="openClienteModal()" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#141210] to-[#0B0A09] hover:brightness-110 text-white text-xs font-bold flex items-center gap-1.5 border border-[#C8A25A]/40 shadow-sm">
+          <button type="button" onclick="openClienteModal()" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#181511] to-[#0D0B09] hover:brightness-110 text-white text-xs font-bold flex items-center gap-1.5 border border-[#C8A25A]/40 shadow-sm">
             <i data-lucide="user-plus" class="w-3.5 h-3.5 text-[#E5C888]"></i> + Novo Cliente
           </button>
-          <button type="button" onclick="openProcessoModal()" class="px-3.5 py-2 rounded-xl border border-[#C8A25A]/60 bg-[#FAF3E3] hover:bg-[#F5E9CE] dark:bg-slate-800 text-[#141210] dark:text-[#E5C888] text-xs font-bold flex items-center gap-1.5 shadow-2xs">
+          <button type="button" onclick="openProcessoModal()" class="px-3.5 py-2 rounded-xl border border-[#C8A25A]/60 bg-[#FAF3E3] hover:bg-[#F5E9CE] dark:bg-slate-800 text-[#181511] dark:text-[#E5C888] text-xs font-bold flex items-center gap-1.5 shadow-2xs">
             <i data-lucide="folder-plus" class="w-3.5 h-3.5"></i> + Processo
           </button>
         </div>
@@ -696,15 +804,15 @@
           <!-- 4 Cards KPI Clicáveis (Bento 2.0 Spotlight Cards) -->
           <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5">
             <div onclick="openKpiDrilldown('clientes')" class="nl-bento-card relative overflow-hidden cursor-pointer group bg-white dark:bg-slate-900 rounded-2xl p-5 border border-[#C8A25A]/30 dark:border-slate-800">
-              <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#141210] via-[#D4AF37] to-[#C8A25A]"></div>
+              <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#181511] via-[#D4AF37] to-[#C8A25A]"></div>
               <div class="flex items-center justify-between">
                 <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500">Clientes Ativos</span>
-                <span class="w-10 h-10 rounded-xl bg-[#FAF3E3] text-[#141210] border border-[#C8A25A]/35 dark:bg-[#141210]/30 dark:text-[#E5C888] flex items-center justify-center group-hover:scale-110 transition">
+                <span class="w-10 h-10 rounded-xl bg-[#FAF3E3] text-[#181511] border border-[#C8A25A]/35 dark:bg-[#181511]/30 dark:text-[#E5C888] flex items-center justify-center group-hover:scale-110 transition">
                   <i data-lucide="users" class="w-5 h-5"></i>
                 </span>
               </div>
               <div id="kpi-total-clientes" class="font-mono text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-3">0</div>
-              <div class="mt-3 pt-2.5 border-t border-stone-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-semibold text-slate-500 group-hover:text-[#141210] dark:group-hover:text-[#E5C888] transition">
+              <div class="mt-3 pt-2.5 border-t border-stone-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-semibold text-slate-500 group-hover:text-[#181511] dark:group-hover:text-[#E5C888] transition">
                 <span>Listar carteira ativa</span>
                 <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#C8A25A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
               </div>
@@ -719,7 +827,7 @@
                 </span>
               </div>
               <div id="kpi-total-processos" class="font-mono text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-3">0</div>
-              <div id="kpi-sub-processos" class="mt-3 pt-2.5 border-t border-stone-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-semibold text-slate-500 group-hover:text-[#141210] dark:group-hover:text-[#E5C888] transition">
+              <div id="kpi-sub-processos" class="mt-3 pt-2.5 border-t border-stone-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-semibold text-slate-500 group-hover:text-[#181511] dark:group-hover:text-[#E5C888] transition">
                 <span>Inspecionar processos</span>
                 <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#C8A25A] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
               </div>
@@ -763,7 +871,7 @@
                   <h3 class="text-xs font-extrabold uppercase tracking-wider text-slate-700 dark:text-slate-200">Balanço Financeiro (R$)</h3>
                   <p class="text-[11px] text-slate-400 mt-0.5">Honorários quitados vs. em aberto</p>
                 </div>
-                <span class="px-2.5 py-1 rounded-full bg-[#FAF3E3] dark:bg-slate-800 border border-[#C8A25A]/35 text-[10px] text-[#141210] dark:text-[#E5C888] font-extrabold uppercase tracking-wider">Tempo Real</span>
+                <span class="px-2.5 py-1 rounded-full bg-[#FAF3E3] dark:bg-slate-800 border border-[#C8A25A]/35 text-[10px] text-[#181511] dark:text-[#E5C888] font-extrabold uppercase tracking-wider">Tempo Real</span>
               </div>
               <div class="h-60 relative">
                 <canvas id="chart-financeiro"></canvas>
@@ -776,7 +884,7 @@
                   <h3 class="text-xs font-extrabold uppercase tracking-wider text-slate-700 dark:text-slate-200">Processos por Etapa do Funil</h3>
                   <p class="text-[11px] text-slate-400 mt-0.5">Distribuição nas 7 fases jurídicas</p>
                 </div>
-                <span class="px-2.5 py-1 rounded-full bg-[#FAF3E3] dark:bg-slate-800 border border-[#C8A25A]/35 text-[10px] text-[#141210] dark:text-[#E5C888] font-extrabold uppercase tracking-wider">7 Fases</span>
+                <span class="px-2.5 py-1 rounded-full bg-[#FAF3E3] dark:bg-slate-800 border border-[#C8A25A]/35 text-[10px] text-[#181511] dark:text-[#E5C888] font-extrabold uppercase tracking-wider">7 Fases</span>
               </div>
               <div class="h-60 relative">
                 <canvas id="chart-pipeline"></canvas>
@@ -789,7 +897,7 @@
                   <h3 class="text-xs font-extrabold uppercase tracking-wider text-slate-700 dark:text-slate-200">Prazos Críticos da Semana</h3>
                   <p class="text-[11px] text-slate-400 mt-0.5">Agenda processual e tarefas</p>
                 </div>
-                <button type="button" onclick="switchAdminView('kanban')" class="px-2.5 py-1 rounded-lg bg-[#141210]/10 hover:bg-[#141210] text-[#141210] hover:text-white dark:bg-slate-800 dark:text-[#E5C888] text-[11px] font-bold transition">Ver Painel →</button>
+                <button type="button" onclick="switchAdminView('kanban')" class="px-2.5 py-1 rounded-lg bg-[#181511]/10 hover:bg-[#181511] text-[#181511] hover:text-white dark:bg-slate-800 dark:text-[#E5C888] text-[11px] font-bold transition">Ver Painel →</button>
               </div>
               <div id="dashboard-prazos-list" class="space-y-2.5 max-h-60 overflow-y-auto pr-1"></div>
             </div>
@@ -803,7 +911,7 @@
           <div class="bg-white dark:bg-slate-900 rounded-2xl border border-[#C8A25A]/50 shadow-xs p-5 sm:p-6">
             <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b border-stone-200 dark:border-slate-800">
               <div class="flex items-center gap-3">
-                <span class="w-10 h-10 rounded-xl bg-[#141210] text-[#E5C888] flex items-center justify-center shadow-sm">
+                <span class="w-10 h-10 rounded-xl bg-[#181511] text-[#E5C888] flex items-center justify-center shadow-sm">
                   <i data-lucide="inbox" class="w-5 h-5"></i>
                 </span>
                 <div>
@@ -834,7 +942,7 @@
             <div class="relative flex-1 min-w-[240px]">
               <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
               <input id="search-clientes" type="text" oninput="renderClientesView()" placeholder="Pesquisar cliente por nome, CPF/CNPJ, telefone ou e-mail..."
-                class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-stone-200 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#141210]">
+                class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-stone-200 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#181511]">
             </div>
             <div class="flex items-center gap-2">
               <select id="filter-clientes-etapa" onchange="renderClientesView()" class="px-3 py-2.5 rounded-xl border border-stone-200 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 text-xs font-semibold">
@@ -847,7 +955,7 @@
                 <option value="Fase Recursal">Fase Recursal</option>
                 <option value="Concluído/Execução">Concluído/Execução</option>
               </select>
-              <button type="button" onclick="openClienteModal()" class="px-4 py-2.5 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold flex items-center gap-1.5">
+              <button type="button" onclick="openClienteModal()" class="px-4 py-2.5 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold flex items-center gap-1.5">
                 <i data-lucide="user-plus" class="w-4 h-4"></i> Novo Cliente
               </button>
             </div>
@@ -875,10 +983,10 @@
                   class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 text-sm font-bold text-slate-900 dark:text-white"></select>
               </div>
               <div class="flex flex-wrap items-center gap-2">
-                <button type="button" onclick="openAndamentoModal()" class="px-4 py-2.5 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm">
+                <button type="button" onclick="openAndamentoModal()" class="px-4 py-2.5 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm">
                   <i data-lucide="plus-circle" class="w-4 h-4"></i> + Registar Despacho / Andamento
                 </button>
-                <button type="button" onclick="syncCurrentProcessWithDataJud()" class="px-3.5 py-2.5 rounded-xl border border-[#C8A25A] bg-[#FDF8EE] dark:bg-slate-800 text-[#141210] dark:text-[#E5C888] text-xs font-bold flex items-center gap-1.5">
+                <button type="button" onclick="syncCurrentProcessWithDataJud()" class="px-3.5 py-2.5 rounded-xl border border-[#C8A25A] bg-[#FDF8EE] dark:bg-slate-800 text-[#181511] dark:text-[#E5C888] text-xs font-bold flex items-center gap-1.5">
                   <i data-lucide="landmark" class="w-4 h-4"></i> Acompanhamento do Processo
                 </button>
                 <button type="button" onclick="editCurrentPipelineProcesso()" class="px-3 py-2.5 rounded-xl border border-stone-200 dark:border-slate-700 text-xs font-semibold text-slate-600 dark:text-slate-300 flex items-center gap-1">
@@ -891,7 +999,7 @@
             <div>
               <div class="flex items-center justify-between text-xs mb-2">
                 <span class="font-bold text-slate-600 dark:text-slate-300">Fase do Relacionamento & Processo (Clique numa etapa para atualizar):</span>
-                <span id="pipeline-current-stage-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#141210] text-[#E5C888]">-</span>
+                <span id="pipeline-current-stage-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#181511] text-[#E5C888]">-</span>
               </div>
               <div id="pipeline-steps-bar" class="nl-pipeline-track"></div>
             </div>
@@ -905,7 +1013,7 @@
             <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
               <div>
                 <h3 class="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                  <i data-lucide="history" class="w-4 h-4 text-[#141210] dark:text-[#E5C888]"></i>
+                  <i data-lucide="history" class="w-4 h-4 text-[#181511] dark:text-[#E5C888]"></i>
                   Linha do Tempo Oficial & Esclarecimento Acessível ao Cliente
                 </h3>
                 <p class="text-xs text-slate-500">Todos os andamentos abaixo marcados como "Visível ao Cliente" aparecem no Portal Externo em linguagem clara e acolhedora.</p>
@@ -922,7 +1030,7 @@
           <div class="bg-white dark:bg-slate-900 rounded-2xl border border-stone-200/80 dark:border-slate-800 p-6 shadow-xs space-y-5">
             <div class="flex flex-wrap items-start justify-between gap-4">
               <div>
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#141210]/10 text-[#141210] dark:bg-[#C8A25A]/20 dark:text-[#E5C888]">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#181511]/10 text-[#181511] dark:bg-[#C8A25A]/20 dark:text-[#E5C888]">
                   <i data-lucide="landmark" class="w-3.5 h-3.5"></i> Conselho Nacional de Justiça — API Pública Oficial
                 </span>
                 <h2 class="text-lg font-bold text-slate-900 dark:text-white mt-2">
@@ -947,14 +1055,14 @@
               </div>
               <div class="md:col-span-3">
                 <button type="button" id="btn-consultar-datajud" onclick="consultarDataJudCNJ()"
-                  class="w-full py-2.5 px-4 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md">
+                  class="w-full py-2.5 px-4 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md">
                   <i data-lucide="search" class="w-4 h-4"></i> Consultar DataJud
                 </button>
               </div>
             </div>
 
             <div id="datajud-endpoint-info" class="text-xs bg-stone-50 dark:bg-slate-800/70 rounded-xl p-3 border border-stone-200 dark:border-slate-700 flex flex-wrap items-center justify-between gap-2">
-              <span>Tribunal Detectado: <strong id="dj-detected-tribunal" class="text-[#141210] dark:text-[#E5C888]">TJSP</strong></span>
+              <span>Tribunal Detectado: <strong id="dj-detected-tribunal" class="text-[#181511] dark:text-[#E5C888]">TJSP</strong></span>
               <span class="font-mono text-[11px] text-slate-500 truncate" id="dj-detected-url">https://api-publica.datajud.cnj.jus.br/api_publica_tjsp/_search</span>
             </div>
 
@@ -982,10 +1090,10 @@
               </select>
             </div>
             <div class="flex flex-wrap items-center gap-2">
-              <button type="button" onclick="openKanbanColumnModal()" class="px-3.5 py-2.5 rounded-xl border border-[#C8A25A] bg-[#FDF8EE] dark:bg-slate-800 text-[#141210] dark:text-[#E5C888] hover:brightness-95 text-xs font-bold flex items-center gap-1.5 shadow-2xs cursor-pointer transition">
+              <button type="button" onclick="openKanbanColumnModal()" class="px-3.5 py-2.5 rounded-xl border border-[#C8A25A] bg-[#FDF8EE] dark:bg-slate-800 text-[#181511] dark:text-[#E5C888] hover:brightness-95 text-xs font-bold flex items-center gap-1.5 shadow-2xs cursor-pointer transition">
                 <i data-lucide="columns-3" class="w-4 h-4"></i> + Nova Coluna
               </button>
-              <button type="button" onclick="openKanbanModal()" class="px-4 py-2.5 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm cursor-pointer transition">
+              <button type="button" onclick="openKanbanModal()" class="px-4 py-2.5 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm cursor-pointer transition">
                 <i data-lucide="plus" class="w-4 h-4"></i> + Nova Tarefa / Prazo
               </button>
             </div>
@@ -1022,7 +1130,7 @@
               <div class="text-[11px] text-slate-500 mt-1">Custas e despesas operacionais</div>
             </div>
             <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-[#C8A25A]/50 bg-gradient-to-br from-white to-[#FDF8EE] dark:from-slate-900 dark:to-slate-800">
-              <div class="text-xs font-bold uppercase text-[#141210] dark:text-[#E5C888]">Saldo Líquido em Caixa</div>
+              <div class="text-xs font-bold uppercase text-[#181511] dark:text-[#E5C888]">Saldo Líquido em Caixa</div>
               <div id="fin-card-saldo" class="font-mono text-2xl font-extrabold text-slate-900 dark:text-white mt-2">R$ 0,00</div>
               <div class="text-[11px] text-slate-500 mt-1">Receitas pagas − Despesas pagas</div>
             </div>
@@ -1031,7 +1139,7 @@
           <!-- Ações Financeiras -->
           <div class="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-slate-900 p-4 rounded-2xl border border-stone-200/80 dark:border-slate-800">
             <div class="flex flex-wrap items-center gap-2">
-              <button type="button" onclick="openHonorariosParceladosModal()" class="px-4 py-2.5 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm">
+              <button type="button" onclick="openHonorariosParceladosModal()" class="px-4 py-2.5 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm">
                 <i data-lucide="calendar-plus" class="w-4 h-4"></i> + Gerar Contrato de Honorários Parcelados
               </button>
               <button type="button" onclick="openTransacaoModal('Receita')" class="px-3.5 py-2.5 rounded-xl border border-emerald-600/30 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 text-xs font-bold flex items-center gap-1.5">
@@ -1059,7 +1167,7 @@
           <!-- Gestão de Contratos e Honorários Parcelados por Cliente -->
           <div class="bg-white dark:bg-slate-900 rounded-2xl border border-stone-200/80 dark:border-slate-800 p-5 shadow-xs">
             <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-1 flex items-center gap-2">
-              <i data-lucide="file-Spreadsheet" class="w-4 h-4 text-[#141210] dark:text-[#E5C888]"></i>
+              <i data-lucide="file-Spreadsheet" class="w-4 h-4 text-[#181511] dark:text-[#E5C888]"></i>
               Acompanhamento de Honorários Parcelados por Cliente (Valor Acordado, Pago e Saldo Devedor)
             </h3>
             <p class="text-xs text-slate-500 mb-4">Visão sincronizada com a aba "Meus Honorários" do Portal de cada Cliente.</p>
@@ -1096,14 +1204,14 @@
             <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
               <div>
                 <h2 class="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                  <i data-lucide="shield-check" class="w-5 h-5 text-[#141210] dark:text-[#E5C888]"></i>
+                  <i data-lucide="shield-check" class="w-5 h-5 text-[#181511] dark:text-[#E5C888]"></i>
                   Controlo de Acesso ao Portal Externo do Cliente (RBAC + Bcrypt)
                 </h2>
                 <p class="text-xs text-slate-500 mt-0.5">
                   Crie credenciais exclusivas para cada cliente, redefina palavras-passe, suspenda ou revogue acessos instantaneamente.
                 </p>
               </div>
-              <button type="button" onclick="openUserAccessModal()" class="px-4 py-2.5 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm">
+              <button type="button" onclick="openUserAccessModal()" class="px-4 py-2.5 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold flex items-center gap-1.5 shadow-sm">
                 <i data-lucide="key-round" class="w-4 h-4"></i> + Criar Acesso de Cliente
               </button>
             </div>
@@ -1132,10 +1240,10 @@
     </div>
 
     <!-- Header Institucional do Portal do Cliente -->
-    <header class="bg-gradient-to-r from-[#0B0A09] via-[#141210] to-[#0B0A09] text-white border-b border-[#C8A25A]/30 shadow-lg">
+    <header class="bg-gradient-to-r from-[#0D0B09] via-[#181511] to-[#0D0B09] text-white border-b border-[#C8A25A]/30 shadow-lg">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-4">
         <div class="flex items-center gap-3.5">
-          <div class="bg-[#0D0C0A] rounded-xl p-1 shadow-md border border-[#D4AF37]">
+          <div class="bg-[#0A0908] rounded-xl p-1 shadow-md border border-[#D4AF37]">
             <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgMTYwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdvbGRHcmFkSWNvbiIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGN0U1QTkiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI0MCUiIHN0b3AtY29sb3I9IiNENEFGMzciLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNBQTgwMUUiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRjNEQzkyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZ0dyYWRJY29uIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQTE3MTQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDkwODA3Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgcng9IjI4IiBmaWxsPSJ1cmwoI2JnR3JhZEljb24pIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIzLjUiLz4KICA8cmVjdCB4PSIxMiIgeT0iMTIiIHdpZHRoPSIxMzYiIGhlaWdodD0iMTM2IiByeD0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1vcGFjaXR5PSIwLjQ1Ii8+CgogIDwhLS0gQmFsYW7Dp2Egbm8gVG9wbyAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4MCwgNDYpIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSItMTQiIHI9IjMuNSIgZmlsbD0idXJsKCNnb2xkR3JhZEljb24pIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9Ii0xNCIgeDI9IjAiIHkyPSIxMiIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMi4yIi8+CiAgICA8cGF0aCBkPSJNIC0yOCwtNCBRIDAsLTEyIDI4LC00IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIyLjIiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0zMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxsaW5lIHgxPSItMjgiIHkxPSItNCIgeDI9Ii0yMyIgeTI9IjEwIiBzdHJva2U9InVybCgjZ29sZEdyYWRJY29uKSIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KICAgIDxwYXRoIGQ9Ik0gLTM2LDEwIFEgLTI4LDE3IC0yMCwxMCBaIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiLz4KICAgIDxsaW5lIHgxPSIyOCIgeTE9Ii00IiB4Mj0iMjMiIHkyPSIxMCIgc3Ryb2tlPSJ1cmwoI2dvbGRHcmFkSWNvbikiIHN0cm9rZS13aWR0aD0iMS4zIi8+CiAgICA8bGluZSB4MT0iMjgiIHkxPSItNCIgeDI9IjMzIiB5Mj0iMTAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuMyIvPgogICAgPHBhdGggZD0iTSAyMCwxMCBRIDI4LDE3IDM2LDEwIFoiIGZpbGw9InVybCgjZ29sZEdyYWRJY29uKSIvPgogIDwvZz4KCiAgPCEtLSBNb25vZ3JhbWEgREwgUHJpbmNpcGFsIC0tPgogIDx0ZXh0IHg9IjgwIiB5PSIxMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnQ29ybW9yYW50IEdhcmFtb25kJywgJ1RpbWVzIE5ldyBSb21hbicsIHNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ1cmwoI2dvbGRHcmFkSWNvbikiIGxldHRlci1zcGFjaW5nPSIyIj5ETDwvdGV4dD4KICA8bGluZSB4MT0iNDIiIHkxPSIxMzAiIHgyPSIxMTgiIHkyPSIxMzAiIHN0cm9rZT0idXJsKCNnb2xkR3JhZEljb24pIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNzUiLz4KPC9zdmc+" alt="Darcy Luiz" class="w-11 h-11 object-contain">
           </div>
           <div>
@@ -1166,7 +1274,7 @@
       <!-- Card de Boas-vindas -->
       <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-stone-200/90 dark:border-slate-800 shadow-xs flex flex-wrap items-center justify-between gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-[#141210] dark:text-[#E5C888]">Área Exclusiva e Sigilosa</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-[#181511] dark:text-[#E5C888]">Área Exclusiva e Sigilosa</span>
           <h1 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-0.5">
             Olá, <span id="portal-cliente-nome">Cliente</span>!
           </h1>
@@ -1175,7 +1283,7 @@
           </p>
         </div>
         <div class="flex items-center gap-3 bg-[#FAF8F5] dark:bg-slate-800 border border-[#C8A25A]/40 px-4 py-3 rounded-2xl shadow-2xs">
-          <div class="w-9 h-9 rounded-xl bg-[#141210] text-[#E5C888] flex items-center justify-center shrink-0">
+          <div class="w-9 h-9 rounded-xl bg-[#181511] text-[#E5C888] flex items-center justify-center shrink-0">
             <i data-lucide="message-square-text" class="w-4 h-4"></i>
           </div>
           <div class="text-xs">
@@ -1536,7 +1644,7 @@
       const colors = type === 'error'
         ? 'bg-red-700 text-white border-red-400'
         : type === 'info'
-        ? 'bg-[#0B0A09] text-[#E5C888] border-[#C8A25A]'
+        ? 'bg-[#0D0B09] text-[#E5C888] border-[#C8A25A]'
         : 'bg-emerald-800 text-white border-emerald-400';
       el.className = `pointer-events-auto px-4 py-3 rounded-2xl shadow-xl border text-xs font-bold flex items-center justify-between gap-3 animate-view ${colors}`;
       el.innerHTML = `<span>${esc(msg)}</span><button type="button" onclick="this.parentElement.remove()" class="opacity-75 hover:opacity-100">✕</button>`;
@@ -1993,7 +2101,7 @@
       document.querySelectorAll('.admin-nav-btn').forEach(btn => {
         const isActive = btn.getAttribute('data-nav') === viewName;
         btn.className = isActive
-          ? 'admin-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold bg-[#C8A25A] text-[#060505] shadow-md transition'
+          ? 'admin-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold bg-[#C8A25A] text-[#060504] shadow-md transition'
           : 'admin-nav-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-[#E5C888]/85 hover:bg-white/10 hover:text-white transition';
       });
 
@@ -2061,7 +2169,7 @@
                   <span class="px-2 py-0.5 rounded-full text-[10px] font-extrabold ${d.status === 'Pendente' ? 'bg-amber-400 text-slate-950' : 'bg-emerald-100 text-emerald-800'}">${esc(d.status)}</span>
                   <span class="text-xs font-bold text-slate-900 dark:text-white">${esc(cli.nome || 'Cliente')}</span>
                   <span class="text-[11px] text-slate-500">• Proc. ${esc(proc.numero_cnj || proc.titulo_acao || '')}</span>
-                  <span class="text-[11px] text-[#141210] dark:text-[#E5C888] font-semibold">(${esc(andam.titulo_movimento || 'Andamento')})</span>
+                  <span class="text-[11px] text-[#181511] dark:text-[#E5C888] font-semibold">(${esc(andam.titulo_movimento || 'Andamento')})</span>
                 </div>
                 <p class="text-xs text-slate-700 dark:text-slate-200 font-medium">"${esc(d.pergunta_cliente)}"</p>
                 ${d.resposta_advogada ? `<p class="text-[11px] text-emerald-700 dark:text-emerald-400"><strong>Resposta registada:</strong> ${esc(d.resposta_advogada)}</p>` : ''}
@@ -2199,7 +2307,7 @@
           datasets: [{
             label: 'Processos',
             data: countsByPhase,
-            backgroundColor: '#141210',
+            backgroundColor: '#181511',
             borderRadius: 8
           }]
         },
@@ -2227,7 +2335,7 @@
               <div class="text-xs text-slate-500">${esc(c.cpf_cnpj)} • Etapa: <strong>${esc(c.etapa_funil)}</strong></div>
             </div>
             <button type="button" onclick="closeModal(); APP.selectedClienteId='${c.id}'; switchAdminView('clientes');"
-              class="px-3 py-1.5 rounded-xl bg-[#141210] text-white text-xs font-bold">Abrir Ficha</button>
+              class="px-3 py-1.5 rounded-xl bg-[#181511] text-white text-xs font-bold">Abrir Ficha</button>
           </div>
         `).join('');
       } else if (type === 'processos') {
@@ -2239,7 +2347,7 @@
               <div class="text-xs text-slate-500">CNJ: ${esc(p.numero_cnj)} • ${esc(p.tribunal)} • Fase: <strong>${esc(p.fase_pipeline)}</strong></div>
             </div>
             <button type="button" onclick="closeModal(); APP.selectedProcessoId='${p.id}'; switchAdminView('pipeline');"
-              class="px-3 py-1.5 rounded-xl bg-[#141210] text-white text-xs font-bold">Ver Pipeline</button>
+              class="px-3 py-1.5 rounded-xl bg-[#181511] text-white text-xs font-bold">Ver Pipeline</button>
           </div>
         `).join('');
       } else if (type === 'financeiro') {
@@ -2262,7 +2370,7 @@
               <div class="text-[11px] text-slate-500">${esc(t.coluna)} • Vencimento: ${fmtDate(t.data_vencimento)}</div>
             </div>
             <button type="button" onclick="closeModal(); switchAdminView('kanban');"
-              class="px-3 py-1.5 rounded-xl bg-[#141210] text-white text-xs font-bold">Ir ao Kanban</button>
+              class="px-3 py-1.5 rounded-xl bg-[#181511] text-white text-xs font-bold">Ir ao Kanban</button>
           </div>
         `).join('');
       }
@@ -2302,13 +2410,13 @@
           const anxCount = APP.admin.anexos.filter(a => a.cliente_id === c.id).length;
           return `
             <div onclick="APP.selectedClienteId='${c.id}'; renderClientesView();"
-              class="cursor-pointer p-4 rounded-2xl border transition ${active ? 'bg-[#141210] text-white border-[#C8A25A] shadow-md' : 'bg-white dark:bg-slate-900 border-stone-200/80 dark:border-slate-800 hover:border-[#C8A25A]'}">
+              class="cursor-pointer p-4 rounded-2xl border transition ${active ? 'bg-[#181511] text-white border-[#C8A25A] shadow-md' : 'bg-white dark:bg-slate-900 border-stone-200/80 dark:border-slate-800 hover:border-[#C8A25A]'}">
               <div class="flex items-start justify-between gap-2">
                 <div>
                   <div class="text-sm font-bold">${esc(c.nome)}</div>
                   <div class="text-xs ${active ? 'text-[#E5C888]/85' : 'text-slate-500'} mt-0.5">${esc(c.cpf_cnpj || 'CPF não informado')} • ${esc(c.telefone || '')}</div>
                 </div>
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold ${active ? 'bg-[#C8A25A] text-[#060505]' : 'bg-stone-100 dark:bg-slate-800 text-[#141210] dark:text-[#E5C888]'}">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold ${active ? 'bg-[#C8A25A] text-[#060504]' : 'bg-stone-100 dark:bg-slate-800 text-[#181511] dark:text-[#E5C888]'}">
                   ${esc(c.etapa_funil)}
                 </span>
               </div>
@@ -2351,7 +2459,7 @@
           <div>
             <div class="flex items-center gap-2">
               <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">${esc(cli.nome)}</h3>
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#FDF8EE] text-[#141210] border border-[#C8A25A]/40">${esc(cli.etapa_funil)}</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#FDF8EE] text-[#181511] border border-[#C8A25A]/40">${esc(cli.etapa_funil)}</span>
             </div>
             <p class="text-xs text-slate-500 mt-0.5">CPF/CNPJ: <strong>${esc(cli.cpf_cnpj || '—')}</strong> • Profissão: ${esc(cli.profissao || '—')} (${esc(cli.estado_civil || '—')})</p>
           </div>
@@ -2361,7 +2469,7 @@
               <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Direto
             </a>
             <button type="button" onclick="previewSpecificClient('${cli.id}')"
-              class="px-3 py-2 rounded-xl bg-[#FDF8EE] border border-[#C8A25A] text-[#141210] text-xs font-bold flex items-center gap-1">
+              class="px-3 py-2 rounded-xl bg-[#FDF8EE] border border-[#C8A25A] text-[#181511] text-xs font-bold flex items-center gap-1">
               <i data-lucide="eye" class="w-3.5 h-3.5"></i> Ver Portal
             </button>
             <button type="button" onclick="openClienteModal('${cli.id}')"
@@ -2413,7 +2521,7 @@
         <div class="p-4 rounded-2xl bg-[#FDF8EE]/60 dark:bg-slate-800/50 border border-[#C8A25A]/50 mb-5 space-y-4">
           <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-[#C8A25A]/30">
             <div>
-              <h4 class="text-xs sm:text-sm font-extrabold text-[#141210] dark:text-[#E5C888] flex items-center gap-1.5">
+              <h4 class="text-xs sm:text-sm font-extrabold text-[#181511] dark:text-[#E5C888] flex items-center gap-1.5">
                 <i data-lucide="layers" class="w-4 h-4"></i>
                 Ecossistema Integrado de ${esc(cli.nome)} (Conexão entre Abas)
               </h4>
@@ -2429,7 +2537,7 @@
                   <i data-lucide="scale" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Processos & Pipeline (${cliProcessos.length})
                 </span>
                 <button type="button" onclick="openProcessoModal(null, '${cli.id}')"
-                  class="px-2.5 py-1 rounded-lg bg-[#141210] text-white text-[10px] font-bold hover:bg-[#0B0A09]">
+                  class="px-2.5 py-1 rounded-lg bg-[#181511] text-white text-[10px] font-bold hover:bg-[#0D0B09]">
                   + Novo Processo
                 </button>
               </div>
@@ -2438,11 +2546,11 @@
                   <div class="p-2 rounded-lg bg-stone-50 dark:bg-slate-800/80 border border-stone-200/70 dark:border-slate-700 flex items-center justify-between gap-2">
                     <div class="min-w-0">
                       <div class="font-bold text-slate-900 dark:text-white truncate text-[11px]">${esc(p.titulo_acao)}</div>
-                      <div class="text-[10px] text-slate-500 font-mono truncate">${esc(p.numero_cnj || 'Extrajudicial')} • <strong class="text-[#141210] dark:text-[#E5C888]">${esc(p.fase_pipeline)}</strong></div>
+                      <div class="text-[10px] text-slate-500 font-mono truncate">${esc(p.numero_cnj || 'Extrajudicial')} • <strong class="text-[#181511] dark:text-[#E5C888]">${esc(p.fase_pipeline)}</strong></div>
                     </div>
                     <div class="flex items-center gap-1 shrink-0">
                       <button type="button" onclick="APP.selectedProcessoId='${p.id}'; switchAdminView('pipeline');"
-                        class="px-2 py-1 rounded bg-[#141210]/10 text-[#141210] dark:bg-slate-700 dark:text-[#E5C888] text-[10px] font-bold">Pipeline</button>
+                        class="px-2 py-1 rounded bg-[#181511]/10 text-[#181511] dark:bg-slate-700 dark:text-[#E5C888] text-[10px] font-bold">Pipeline</button>
                       <button type="button" onclick="APP.selectedProcessoId='${p.id}'; syncCurrentProcessWithDataJud();"
                         class="px-2 py-1 rounded bg-amber-100 text-amber-900 text-[10px] font-bold">Acompanhar</button>
                     </div>
@@ -2458,7 +2566,7 @@
                   <i data-lucide="clipboard-list" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> Tarefas & Prazos no Kanban (${cliTarefas.length})
                 </span>
                 <button type="button" onclick="openKanbanModal(null, 'A Fazer', '${cli.id}')"
-                  class="px-2.5 py-1 rounded-lg bg-[#141210] text-white text-[10px] font-bold hover:bg-[#0B0A09]">
+                  class="px-2.5 py-1 rounded-lg bg-[#181511] text-white text-[10px] font-bold hover:bg-[#0D0B09]">
                   + Nova Tarefa
                 </button>
               </div>
@@ -2484,7 +2592,7 @@
                 </span>
                 <div class="flex gap-1">
                   <button type="button" onclick="openHonorariosParceladosModal('${cli.id}')"
-                    class="px-2.5 py-1 rounded-lg bg-[#141210] text-white text-[10px] font-bold hover:bg-[#0B0A09]">
+                    class="px-2.5 py-1 rounded-lg bg-[#181511] text-white text-[10px] font-bold hover:bg-[#0D0B09]">
                     + Gerar Contrato
                   </button>
                   <button type="button" onclick="switchAdminView('financeiro')"
@@ -2513,7 +2621,7 @@
                   </button>
                 ` : `
                   <button type="button" onclick="openUserAccessModal(null, '${cli.id}')"
-                    class="px-2.5 py-1 rounded-lg bg-[#141210] text-white text-[10px] font-bold">
+                    class="px-2.5 py-1 rounded-lg bg-[#181511] text-white text-[10px] font-bold">
                     + Criar Login Portal
                   </button>
                 `}
@@ -2522,7 +2630,7 @@
                 ${cliDuvidas.length > 0 ? `
                   <div class="flex items-center justify-between p-2 rounded-lg bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200">
                     <span><i data-lucide="inbox" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> <strong>${cliDuvidas.length}</strong> dúvida(s) enviada(s) pelo Portal (${cliDuvidas.filter(d => d.status === 'Pendente').length} pendente)</span>
-                    <button type="button" onclick="switchAdminView('caixa-entrada')" class="px-2 py-1 rounded bg-[#141210] text-white text-[10px] font-bold">Ver Dúvidas</button>
+                    <button type="button" onclick="switchAdminView('caixa-entrada')" class="px-2 py-1 rounded bg-[#181511] text-white text-[10px] font-bold">Ver Dúvidas</button>
                   </div>
                 ` : `<div class="text-[11px] text-slate-400 py-1">Nenhuma dúvida pendente em Dúvidas do Cliente.</div>`}
               </div>
@@ -2543,17 +2651,17 @@
           <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
             <div>
               <h4 class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
-                <i data-lucide="folder-open" class="w-4 h-4 text-[#141210] dark:text-[#E5C888]"></i>
+                <i data-lucide="folder-open" class="w-4 h-4 text-[#181511] dark:text-[#E5C888]"></i>
                 Documentos & Ficheiros no Storage (Procurações, Petições, Sentenças)
               </h4>
               <p class="text-[11px] text-slate-500">Controle individualmente quais documentos ficam liberados para download no Portal do Cliente.</p>
             </div>
             <div class="flex flex-wrap items-center gap-2">
               <button type="button" onclick="openExternalDriveModal('${cli.id}')"
-                class="px-3 py-2 rounded-xl bg-[#FDF8EE] hover:bg-[#F5E8CE] text-[#141210] border border-[#C8A25A] text-xs font-bold flex items-center gap-1.5 shadow-xs">
+                class="px-3 py-2 rounded-xl bg-[#FDF8EE] hover:bg-[#F5E8CE] text-[#181511] border border-[#C8A25A] text-xs font-bold flex items-center gap-1.5 shadow-xs">
                 <i data-lucide="cloud" class="w-4 h-4"></i> Link Google Drive (+15 GB)
               </button>
-              <label class="cursor-pointer px-3.5 py-2 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold flex items-center gap-1.5 shadow-xs">
+              <label class="cursor-pointer px-3.5 py-2 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold flex items-center gap-1.5 shadow-xs">
                 <i data-lucide="upload-cloud" class="w-4 h-4"></i> Upload PDF / Foto (Auto-Compressão)
                 <input type="file" class="hidden" onchange="handleFileUploadStorage(event, '${cli.id}')">
               </label>
@@ -2564,7 +2672,7 @@
             ${cliAnexos.map(a => `
               <div class="p-3 rounded-xl border border-stone-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2 bg-stone-50/50 dark:bg-slate-800/40">
                 <div class="flex items-center gap-2.5 min-w-0">
-                  <div class="w-8 h-8 rounded-lg bg-[#141210]/10 text-[#141210] dark:text-[#E5C888] flex items-center justify-center shrink-0">
+                  <div class="w-8 h-8 rounded-lg bg-[#181511]/10 text-[#181511] dark:text-[#E5C888] flex items-center justify-center shrink-0">
                     <i data-lucide="file-text" class="w-4 h-4"></i>
                   </div>
                   <div class="min-w-0">
@@ -2578,7 +2686,7 @@
                     ${a.visivel_cliente ? '<i data-lucide="eye" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Visível ao Cliente' : '<i data-lucide="lock" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Só Advogada'}
                   </button>
                   <button type="button" onclick="openAnexo('${a.id}')"
-                    class="px-2.5 py-1 rounded-lg bg-[#141210] text-white text-[11px] font-bold flex items-center gap-1">
+                    class="px-2.5 py-1 rounded-lg bg-[#181511] text-white text-[11px] font-bold flex items-center gap-1">
                     <i data-lucide="download" class="w-3 h-3"></i> Abrir
                   </button>
                   <button type="button" onclick="deleteRecordById('legal_anexos', '${a.id}')" class="p-1 text-rose-600 hover:bg-rose-50 rounded">
@@ -2670,7 +2778,7 @@
           </div>
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border border-stone-300 text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold">Vincular Documento (0 MB usados)</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold">Vincular Documento (0 MB usados)</button>
           </div>
         </form>
       `);
@@ -2764,7 +2872,7 @@
         <div class="p-3 rounded-xl bg-stone-50 dark:bg-slate-800/60 border border-stone-200/70 dark:border-slate-800">
           <div class="text-[10px] font-bold uppercase text-slate-400">Número CNJ & Tribunal</div>
           <div class="text-xs font-mono font-bold text-slate-900 dark:text-white mt-0.5">${esc(proc.numero_cnj || 'Extrajudicial')} (${esc(proc.tribunal)})</div>
-          <div class="text-[10px] text-[#141210] dark:text-[#E5C888] font-semibold mt-0.5 truncate">${esc(proc.sistema_processual || 'PJe — Processo Judicial Eletrônico')} • ${esc(proc.grau_jurisdicao || '1º Grau')}</div>
+          <div class="text-[10px] text-[#181511] dark:text-[#E5C888] font-semibold mt-0.5 truncate">${esc(proc.sistema_processual || 'PJe — Processo Judicial Eletrônico')} • ${esc(proc.grau_jurisdicao || '1º Grau')}</div>
         </div>
         <div class="p-3 rounded-xl bg-stone-50 dark:bg-slate-800/60 border border-stone-200/70 dark:border-slate-800">
           <div class="text-[10px] font-bold uppercase text-slate-400">Classe Processual & Órgão Julgador</div>
@@ -2788,20 +2896,20 @@
           <div class="flex flex-wrap items-center gap-1.5">
             ${cli.id ? `
               <button type="button" onclick="APP.selectedClienteId='${cli.id}'; switchAdminView('clientes');"
-                class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 text-[11px] font-bold hover:border-[#141210]">
+                class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 text-[11px] font-bold hover:border-[#181511]">
                 <i data-lucide="user" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Abrir Ficha no CRM
               </button>
               <button type="button" onclick="previewSpecificClient('${cli.id}')"
-                class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 text-[11px] font-bold hover:border-[#141210]">
+                class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 text-[11px] font-bold hover:border-[#181511]">
                 <i data-lucide="eye" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Portal do Cliente
               </button>
             ` : ''}
             <button type="button" onclick="openKanbanModal(null, 'Pendente de Audiência/Prazo', '${proc.cliente_id}', '${proc.id}')"
-              class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 text-[11px] font-bold hover:border-[#141210]">
+              class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 text-[11px] font-bold hover:border-[#181511]">
               <i data-lucide="clipboard-list" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> + Prazo no Kanban (${procTarefas.length})
             </button>
             <button type="button" onclick="openHonorariosParceladosModal('${proc.cliente_id}')"
-              class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 text-[11px] font-bold hover:border-[#141210]">
+              class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-stone-300 dark:border-slate-700 text-[11px] font-bold hover:border-[#181511]">
               <i data-lucide="wallet" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> Honorários (${procFin.length} parc.)
             </button>
             ${procDuvidas.length > 0 ? `
@@ -2826,13 +2934,13 @@
             <div class="flex flex-wrap items-start justify-between gap-2">
               <div class="space-y-1">
                 <div class="flex flex-wrap items-center gap-1.5">
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#C8A25A] text-[#060505]">Passo ${stepNumber} de ${movs.length}</span>
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#141210] text-[#E5C888]">${esc(a.etapa_pipeline || proc.fase_pipeline)}</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-[#C8A25A] text-[#060504]">Passo ${stepNumber} de ${movs.length}</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#181511] text-[#E5C888]">${esc(a.etapa_pipeline || proc.fase_pipeline)}</span>
                   <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-stone-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200">${esc(a.origem)} ${a.codigo_cnj ? `• Cód. CNJ ${a.codigo_cnj}` : ''}</span>
                   <span class="text-[11px] text-slate-500"><i data-lucide="calendar" class="w-3 h-3 inline -mt-0.5 mr-1"></i> ${fmtDateTime(a.data_hora)}</span>
                 </div>
                 <h4 class="text-sm font-extrabold text-slate-900 dark:text-white pt-1">${esc(a.titulo_movimento)}</h4>
-                ${a.orgao_julgador ? `<div class="text-[11px] font-semibold text-[#141210] dark:text-[#E5C888]"><i data-lucide="landmark" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> Órgão Julgador / Setor: ${esc(a.orgao_julgador)}</div>` : ''}
+                ${a.orgao_julgador ? `<div class="text-[11px] font-semibold text-[#181511] dark:text-[#E5C888]"><i data-lucide="landmark" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> Órgão Julgador / Setor: ${esc(a.orgao_julgador)}</div>` : ''}
                 ${a.complementos_cnj ? `<div class="text-[11px] text-slate-500 bg-white/80 dark:bg-slate-900/60 px-2.5 py-1 rounded-lg border border-stone-200/70 dark:border-slate-700"><i data-lucide="file-text" class="w-3 h-3 inline -mt-0.5 mr-1"></i> <strong>Complementos CNJ:</strong> ${esc(a.complementos_cnj)}</div>` : ''}
                 <p class="text-xs text-slate-600 dark:text-slate-300 pt-0.5">${esc(a.descricao_tecnica)}</p>
                 ${a.prazo_sugerido ? `
@@ -2853,7 +2961,7 @@
             <!-- Card de Esclarecimento Acessível ao Cliente -->
             <div class="p-3.5 rounded-xl bg-[#FAF8F5] dark:bg-slate-800/80 border border-[#C8A25A]/40 space-y-1.5 shadow-2xs">
               <div class="flex items-center justify-between gap-2">
-                <span class="text-[11px] font-extrabold text-[#141210] dark:text-[#E5C888] flex items-center gap-1.5">
+                <span class="text-[11px] font-extrabold text-[#181511] dark:text-[#E5C888] flex items-center gap-1.5">
                   <i data-lucide="message-square-text" class="w-3.5 h-3.5 text-[#C8A25A]"></i>
                   Esclarecimento ao Cliente (Linguagem Acessível):
                 </span>
@@ -2863,7 +2971,7 @@
               </div>
               <p class="text-xs text-slate-700 dark:text-slate-200 leading-relaxed">${esc(a.explicacao_leiga)}</p>
               ${a.proximo_passo_leigo ? `
-                <div class="pt-1.5 border-t border-[#C8A25A]/30 text-[11px] text-[#141210] dark:text-[#E5C888] font-semibold">
+                <div class="pt-1.5 border-t border-[#C8A25A]/30 text-[11px] text-[#181511] dark:text-[#E5C888] font-semibold">
                   <i data-lucide="compass" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> <strong>Próximo Passo Orientado:</strong> ${esc(a.proximo_passo_leigo)}
                 </div>
               ` : ''}
@@ -3175,7 +3283,7 @@
         <div class="p-5 rounded-3xl bg-gradient-to-br from-[#FDF8EE] via-white to-[#FAF3E3] dark:from-slate-800 dark:to-slate-900 border-2 border-[#C8A25A] shadow-sm space-y-4">
           <div class="flex flex-wrap items-start justify-between gap-3 pb-3 border-b border-[#C8A25A]/30">
             <div>
-              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#141210] text-[#E5C888] text-[10px] font-extrabold uppercase tracking-wider">
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#181511] text-[#E5C888] text-[10px] font-extrabold uppercase tracking-wider">
                 <i data-lucide="landmark" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> ${esc(sourceLabel)}
               </div>
               <h4 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white mt-1.5">
@@ -3205,7 +3313,7 @@
             </div>
             <div class="p-3 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-stone-200 dark:border-slate-700">
               <div class="text-[10px] font-bold uppercase text-slate-400">Órgão Julgador / Vara</div>
-              <div class="font-bold text-[#141210] dark:text-[#E5C888] mt-0.5">${esc(capa.orgao_julgador)}</div>
+              <div class="font-bold text-[#181511] dark:text-[#E5C888] mt-0.5">${esc(capa.orgao_julgador)}</div>
             </div>
             <div class="p-3 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-stone-200 dark:border-slate-700">
               <div class="text-[10px] font-bold uppercase text-slate-400">Sistema Eletrônico & Grau</div>
@@ -3226,7 +3334,7 @@
         <div class="space-y-3 pt-2">
           <div class="flex items-center justify-between">
             <h5 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-              <i data-lucide="list-ordered" class="w-4 h-4 text-[#141210] dark:text-[#E5C888]"></i>
+              <i data-lucide="list-ordered" class="w-4 h-4 text-[#181511] dark:text-[#E5C888]"></i>
               Histórico Passo a Passo Detalhado do Processo (${movs.length} Movimentações Sincronizadas)
             </h5>
             <span class="text-[11px] text-slate-500">Ordem: do passo mais recente (Passo ${movs.length}) até a abertura do processo (Passo 1)</span>
@@ -3237,13 +3345,13 @@
               <div class="flex flex-wrap items-start justify-between gap-2 pb-2.5 border-b border-stone-100 dark:border-slate-800">
                 <div class="space-y-1">
                   <div class="flex flex-wrap items-center gap-1.5">
-                    <span class="px-2.5 py-0.5 rounded-full bg-[#C8A25A] text-[#060505] text-[10px] font-extrabold">
+                    <span class="px-2.5 py-0.5 rounded-full bg-[#C8A25A] text-[#060504] text-[10px] font-extrabold">
                       PASSO ${m.passo_numero} DE ${m.total_passos}
                     </span>
                     <span class="px-2 py-0.5 rounded bg-stone-100 dark:bg-slate-800 text-[10px] font-mono font-bold text-slate-700 dark:text-slate-200">
                       Cód. TPU/CNJ ${m.codigo_cnj}
                     </span>
-                    <span class="px-2.5 py-0.5 rounded-full bg-[#141210]/10 text-[#141210] dark:bg-slate-800 dark:text-[#E5C888] text-[10px] font-bold">
+                    <span class="px-2.5 py-0.5 rounded-full bg-[#181511]/10 text-[#181511] dark:bg-slate-800 dark:text-[#E5C888] text-[10px] font-bold">
                       Fase: ${esc(m.etapa_pipeline)}
                     </span>
                     <span class="text-[11px] font-semibold text-slate-500"><i data-lucide="calendar" class="w-3 h-3 inline -mt-0.5 mr-1"></i> ${fmtDateTime(m.data_hora)}</span>
@@ -3281,14 +3389,14 @@
               <!-- Esclarecimento Acessível + Próximo Passo -->
               <div class="p-3.5 rounded-xl bg-[#FAF8F5] dark:bg-slate-800 text-xs border border-[#C8A25A]/40 space-y-1.5 shadow-2xs">
                 <div>
-                  <strong class="text-[#141210] dark:text-[#E5C888] flex items-center gap-1.5">
+                  <strong class="text-[#181511] dark:text-[#E5C888] flex items-center gap-1.5">
                     <i data-lucide="message-square-text" class="w-3.5 h-3.5"></i>
                     Esclarecimento ao Cliente (Linguagem Acessível):
                   </strong>
                   <p class="text-slate-700 dark:text-slate-200 mt-1">${esc(m.explicacao_leiga)}</p>
                 </div>
                 ${m.proximo_passo_leigo ? `
-                  <div class="pt-1.5 border-t border-[#C8A25A]/30 text-[11px] text-[#141210] dark:text-[#E5C888]">
+                  <div class="pt-1.5 border-t border-[#C8A25A]/30 text-[11px] text-[#181511] dark:text-[#E5C888]">
                     <i data-lucide="compass" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> <strong>O que acontece a seguir:</strong> ${esc(m.proximo_passo_leigo)}
                   </div>
                 ` : ''}
@@ -3425,14 +3533,14 @@
             ondrop="handleKanbanDrop(event, '${safeColAttr}')">
             <div class="flex items-center justify-between gap-1.5 mb-3 px-1">
               <div class="flex items-center gap-2 min-w-0">
-                <i data-lucide="${esc(col.lucideIcon || 'columns-3')}" class="w-3.5 h-3.5 text-[#141210] dark:text-[#E5C888] shrink-0"></i>
+                <i data-lucide="${esc(col.lucideIcon || 'columns-3')}" class="w-3.5 h-3.5 text-[#181511] dark:text-[#E5C888] shrink-0"></i>
                 <span class="text-xs font-extrabold text-slate-800 dark:text-white truncate" title="${esc(sanitizeKanbanTitleNoEmoji(col.title || col.id))}">${esc(sanitizeKanbanTitleNoEmoji(col.title || col.id))}</span>
                 <span class="font-mono px-2 py-0.5 rounded-full text-[11px] font-bold shrink-0 ${badgeCls}">${tasks.length}</span>
               </div>
               <div class="flex items-center gap-0.5 opacity-80 group-hover/col:opacity-100 transition shrink-0">
                 ${idx > 0 ? `<button type="button" onclick="moveKanbanColumn(${idx}, -1)" class="p-1 rounded-lg hover:bg-stone-200 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-700 dark:hover:text-white" title="Mover coluna para a esquerda"><i data-lucide="chevron-left" class="w-3.5 h-3.5"></i></button>` : ''}
                 ${idx < KANBAN_COLUMNS.length - 1 ? `<button type="button" onclick="moveKanbanColumn(${idx}, 1)" class="p-1 rounded-lg hover:bg-stone-200 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-700 dark:hover:text-white" title="Mover coluna para a direita"><i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></button>` : ''}
-                <button type="button" onclick="openKanbanColumnModal(${idx})" class="p-1 rounded-lg hover:bg-stone-200 dark:hover:bg-slate-800 text-slate-400 hover:text-[#141210] dark:hover:text-[#E5C888]" title="Renomear / Editar Coluna">
+                <button type="button" onclick="openKanbanColumnModal(${idx})" class="p-1 rounded-lg hover:bg-stone-200 dark:hover:bg-slate-800 text-slate-400 hover:text-[#181511] dark:hover:text-[#E5C888]" title="Renomear / Editar Coluna">
                   <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
                 </button>
                 ${KANBAN_COLUMNS.length > 1 ? `<button type="button" onclick="deleteKanbanColumn(${idx})" class="p-1 rounded-lg hover:bg-rose-500/15 text-slate-400 hover:text-rose-500" title="Excluir Coluna"><i data-lucide="trash-2" class="w-3.5 h-3.5"></i></button>` : ''}
@@ -3444,7 +3552,7 @@
             </div>
 
             <button type="button" onclick="openKanbanModal(null, '${safeColAttr}')"
-              class="mt-3 w-full py-2 rounded-xl border border-dashed border-stone-300 dark:border-slate-700 text-xs font-bold text-slate-500 hover:text-[#141210] hover:border-[#141210] dark:hover:text-[#E5C888] dark:hover:border-[#C8A25A] transition cursor-pointer">
+              class="mt-3 w-full py-2 rounded-xl border border-dashed border-stone-300 dark:border-slate-700 text-xs font-bold text-slate-500 hover:text-[#181511] hover:border-[#181511] dark:hover:text-[#E5C888] dark:hover:border-[#C8A25A] transition cursor-pointer">
               + Adicionar Cartão
             </button>
           </div>
@@ -3454,10 +3562,10 @@
       const addColCardHtml = `
         <button type="button" onclick="openKanbanColumnModal()"
           class="w-[280px] sm:w-[300px] shrink-0 rounded-2xl p-5 border-2 border-dashed border-stone-300 dark:border-slate-800 hover:border-[#C8A25A] bg-stone-50/50 dark:bg-slate-900/40 hover:bg-[#FDF8EE]/40 dark:hover:bg-slate-900/80 min-h-[200px] flex flex-col items-center justify-center gap-2.5 cursor-pointer transition group">
-          <div class="w-11 h-11 rounded-2xl bg-[#141210]/10 dark:bg-[#C8A25A]/15 text-[#141210] dark:text-[#E5C888] flex items-center justify-center group-hover:scale-110 transition">
+          <div class="w-11 h-11 rounded-2xl bg-[#181511]/10 dark:bg-[#C8A25A]/15 text-[#181511] dark:text-[#E5C888] flex items-center justify-center group-hover:scale-110 transition">
             <i data-lucide="plus" class="w-5 h-5"></i>
           </div>
-          <span class="text-xs font-extrabold text-slate-700 dark:text-slate-200 group-hover:text-[#141210] dark:group-hover:text-[#E5C888]">+ Adicionar Nova Coluna</span>
+          <span class="text-xs font-extrabold text-slate-700 dark:text-slate-200 group-hover:text-[#181511] dark:group-hover:text-[#E5C888]">+ Adicionar Nova Coluna</span>
           <span class="text-[11px] text-slate-400 text-center leading-relaxed">Crie livremente novas colunas de trabalho para o seu escritório</span>
         </button>
       `;
@@ -3641,7 +3749,7 @@
             <div>
               <label class="font-bold block mb-1.5 text-slate-700 dark:text-slate-200">Nome da Coluna *</label>
               <input id="f-kcol-name" required placeholder="Ex: Aguardando Perícia, Elaborar Petição, Revisão..." value="${esc(col.id)}"
-                class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-[#141210]">
+                class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-[#181511]">
             </div>
 
             <div>
@@ -3655,7 +3763,7 @@
                 ${iconChoices.map(ic => `
                   <button type="button" onclick="selectKanbanColIcon('${ic.key}')"
                     class="px-2.5 py-1.5 rounded-lg border border-stone-200 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 hover:border-[#C8A25A] flex items-center gap-1.5 text-[11px] font-semibold cursor-pointer transition">
-                    <i data-lucide="${ic.key}" class="w-3.5 h-3.5 text-[#141210] dark:text-[#E5C888]"></i>
+                    <i data-lucide="${ic.key}" class="w-3.5 h-3.5 text-[#181511] dark:text-[#E5C888]"></i>
                     <span>${ic.label}</span>
                   </button>
                 `).join('')}
@@ -3678,7 +3786,7 @@
             ` : '<span></span>'}
             <div class="flex gap-2">
               <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border border-stone-300 dark:border-slate-700 text-xs font-bold">Cancelar</button>
-              <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold shadow-sm cursor-pointer">
+              <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold shadow-sm cursor-pointer">
                 ${isEdit ? 'Salvar Alterações' : '+ Criar Coluna'}
               </button>
             </div>
@@ -3809,14 +3917,14 @@
           </div>
 
           <div onclick="openKanbanModal('${t.id}')" class="cursor-pointer">
-            <h4 class="text-xs font-bold text-slate-900 dark:text-white leading-snug hover:text-[#141210] dark:hover:text-[#E5C888]">${esc(t.titulo)}</h4>
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white leading-snug hover:text-[#181511] dark:hover:text-[#E5C888]">${esc(t.titulo)}</h4>
             ${t.descricao ? `<p class="text-[11px] text-slate-500 mt-1 line-clamp-2">${esc(t.descricao)}</p>` : ''}
           </div>
 
           <div class="flex flex-wrap items-center gap-1 pt-0.5">
             ${cli ? `
               <button type="button" onclick="APP.selectedClienteId='${cli.id}'; switchAdminView('clientes');"
-                class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-[#FDF8EE] dark:bg-slate-700 text-[#141210] dark:text-[#E5C888] border border-[#C8A25A]/40 truncate max-w-full hover:underline inline-flex items-center gap-1" title="Abrir Ficha no CRM">
+                class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-[#FDF8EE] dark:bg-slate-700 text-[#181511] dark:text-[#E5C888] border border-[#C8A25A]/40 truncate max-w-full hover:underline inline-flex items-center gap-1" title="Abrir Ficha no CRM">
                 <i data-lucide="user" class="w-3 h-3 shrink-0"></i> ${esc(cli.nome)}
               </button>
             ` : ''}
@@ -3835,7 +3943,7 @@
                 <span>${pct}%</span>
               </div>
               <div class="w-full h-1.5 bg-stone-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                <div class="h-full bg-[#141210] dark:bg-[#C8A25A]" style="width:${pct}%"></div>
+                <div class="h-full bg-[#181511] dark:bg-[#C8A25A]" style="width:${pct}%"></div>
               </div>
             </div>
           ` : ''}
@@ -3966,7 +4074,7 @@
                   class="px-2 py-1 rounded-lg bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-700 text-[10px] font-bold"><i data-lucide="user" class="w-3 h-3 inline -mt-0.5 mr-1"></i> CRM</button>
                 ${proc ? `<button type="button" onclick="APP.selectedProcessoId='${proc.id}'; switchAdminView('pipeline');"
                   class="px-2 py-1 rounded-lg bg-white dark:bg-slate-900 border border-stone-200 dark:border-slate-700 text-[10px] font-bold"><i data-lucide="scale" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Pipeline</button>` : ''}
-                <span class="px-2.5 py-1 rounded-full text-xs font-extrabold bg-[#141210] text-[#E5C888]">${pct}% Quitado</span>
+                <span class="px-2.5 py-1 rounded-full text-xs font-extrabold bg-[#181511] text-[#E5C888]">${pct}% Quitado</span>
               </div>
             </div>
 
@@ -4085,7 +4193,7 @@
         subtitulo: 'ADVOCACIA & CONSULTORIA JURÍDICA',
         oab_registro: 'OAB/RJ',
         whatsapp_oficial: ESCRITORIO_WHATSAPP,
-        cor_primaria: '#141210',
+        cor_primaria: '#181511',
         cor_destaque: '#C8A25A',
         logo_url: ''
       };
@@ -4117,7 +4225,7 @@
             </div>
             <div>
               <label class="font-bold block mb-1">Cor Principal da Marca (Hex)</label>
-              <input id="wl-cor1" value="${esc(e.cor_primaria || '#141210')}" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 font-mono">
+              <input id="wl-cor1" value="${esc(e.cor_primaria || '#181511')}" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800 font-mono">
             </div>
             <div>
               <label class="font-bold block mb-1">Cor de Destaque / Dourado (Hex)</label>
@@ -4126,7 +4234,7 @@
           </div>
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Salvar Identidade</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Salvar Identidade</button>
           </div>
         </form>
       `);
@@ -4196,7 +4304,7 @@
           </div>
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Criar Escritório Isolado</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Criar Escritório Isolado</button>
           </div>
         </form>
       `);
@@ -4334,7 +4442,7 @@
               <div class="space-y-3 text-xs">
                 <div>
                   <div class="flex justify-between font-bold text-slate-700 dark:text-slate-200 mb-1">
-                    <span class="flex items-center gap-1.5"><i data-lucide="database" class="w-3.5 h-3.5 text-[#141210] dark:text-[#E5C888]"></i> Banco de Dados (Supabase Free)</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="database" class="w-3.5 h-3.5 text-[#181511] dark:text-[#E5C888]"></i> Banco de Dados (Supabase Free)</span>
                     <span class="font-mono">${db.usado_mb} MB / ${db.limite_mb} MB (${db.percentual}%)</span>
                   </div>
                   <div class="w-full h-2 bg-stone-200 dark:bg-slate-800 rounded-full overflow-hidden">
@@ -4353,7 +4461,7 @@
                   </div>
                   <div class="flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-500 mt-1">
                     <span>Livre no Cofre Interno: <strong>${((getVaultPool().length * 1024) - Number(st.usado_mb || 0)).toFixed(1)} MB</strong> + Compressão 10x Ativa</span>
-                    <button type="button" onclick="openMultiVaultModal()" class="text-[#141210] dark:text-[#E5C888] font-extrabold underline hover:opacity-80">
+                    <button type="button" onclick="openMultiVaultModal()" class="text-[#181511] dark:text-[#E5C888] font-extrabold underline hover:opacity-80">
                       + Somar Novo Cofre de 1 GB Grátis
                     </button>
                   </div>
@@ -4374,7 +4482,7 @@
                     <i data-lucide="palette" class="w-4 h-4 text-[#C8A25A]"></i>
                     Configuração White-Label & Multi-Escritório
                   </h3>
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#FDF8EE] text-[#141210] border border-[#C8A25A]/40">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#FDF8EE] text-[#181511] border border-[#C8A25A]/40">
                     Opção A Ativa (Multi-Tenant)
                   </span>
                 </div>
@@ -4389,10 +4497,10 @@
               </div>
 
               <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-200/70 dark:border-slate-800">
-                <button type="button" onclick="openWhiteLabelConfigModal()" class="px-3.5 py-2 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold flex items-center gap-1.5">
+                <button type="button" onclick="openWhiteLabelConfigModal()" class="px-3.5 py-2 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold flex items-center gap-1.5">
                   <i data-lucide="palette" class="w-3.5 h-3.5"></i> Personalizar Marca / WhatsApp
                 </button>
-                <button type="button" onclick="openNewTenantModal()" class="px-3.5 py-2 rounded-xl bg-[#FDF8EE] hover:bg-[#F5E8CE] text-[#141210] border border-[#C8A25A] text-xs font-bold flex items-center gap-1.5">
+                <button type="button" onclick="openNewTenantModal()" class="px-3.5 py-2 rounded-xl bg-[#FDF8EE] hover:bg-[#F5E8CE] text-[#181511] border border-[#C8A25A] text-xs font-bold flex items-center gap-1.5">
                   <i data-lucide="building-2" class="w-3.5 h-3.5"></i> + Novo Escritório Cliente (SaaS)
                 </button>
               </div>
@@ -4414,13 +4522,13 @@
           <div class="p-5 rounded-2xl border border-stone-200 dark:border-slate-800 bg-stone-50/50 dark:bg-slate-800/40 flex flex-col justify-between gap-4">
             <div>
               <div class="flex items-center justify-between gap-2">
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase ${u.role === 'advogada' ? 'bg-[#141210] text-[#E5C888]' : 'bg-stone-200 dark:bg-slate-700 text-slate-800 dark:text-white'}">
+                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase ${u.role === 'advogada' ? 'bg-[#181511] text-[#E5C888]' : 'bg-stone-200 dark:bg-slate-700 text-slate-800 dark:text-white'}">
                   ${esc(u.role)}
                 </span>
                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold ${statusColor}">${esc(u.status)}</span>
               </div>
               <h4 class="text-base font-extrabold text-slate-900 dark:text-white mt-2">${esc(u.nome_exibicao)}</h4>
-              <div class="text-xs font-mono font-bold text-[#141210] dark:text-[#E5C888]">${esc(u.username)}</div>
+              <div class="text-xs font-mono font-bold text-[#181511] dark:text-[#E5C888]">${esc(u.username)}</div>
               <div class="text-[11px] text-slate-500 mt-1">
                 ${cli ? `Vinculado a: <strong>${esc(cli.nome)}</strong>` : 'Acesso Administrativo Total'}
               </div>
@@ -4433,7 +4541,7 @@
               </button>
               ${u.cliente_id ? `
                 <button type="button" onclick="previewSpecificClient('${u.cliente_id}')"
-                  class="px-2.5 py-1.5 rounded-xl bg-[#FDF8EE] border border-[#C8A25A] text-[#141210] text-[11px] font-bold">
+                  class="px-2.5 py-1.5 rounded-xl bg-[#FDF8EE] border border-[#C8A25A] text-[#181511] text-[11px] font-bold">
                   <i data-lucide="eye" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Ver Portal
                 </button>
               ` : ''}
@@ -4491,7 +4599,7 @@
                 <div class="text-sm font-bold text-slate-900 dark:text-white">${esc(c.nome)}</div>
                 <div class="text-xs text-slate-500">Fase: ${esc(c.etapa_funil)}</div>
               </div>
-              <span class="px-3 py-1 rounded-xl bg-[#141210] text-[#E5C888] text-xs font-bold">Abrir Portal →</span>
+              <span class="px-3 py-1 rounded-xl bg-[#181511] text-[#E5C888] text-xs font-bold">Abrir Portal →</span>
             </button>
           `).join('')}
         </div>
@@ -4546,7 +4654,7 @@
       document.querySelectorAll('.client-tab-btn').forEach(btn => {
         const active = btn.getAttribute('data-ctab') === tab;
         btn.className = active
-          ? 'client-tab-btn flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-extrabold bg-[#141210] text-white shadow-sm transition flex items-center justify-center gap-2'
+          ? 'client-tab-btn flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-extrabold bg-[#181511] text-white shadow-sm transition flex items-center justify-center gap-2'
           : 'client-tab-btn flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-white/60 transition flex items-center justify-center gap-2';
       });
       refreshIcons();
@@ -4566,7 +4674,7 @@
             <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 border border-stone-200/90 dark:border-slate-800 shadow-xs space-y-6">
               <div class="flex flex-wrap items-start justify-between gap-3 pb-4 border-b border-stone-200 dark:border-slate-800">
                 <div>
-                  <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-[#141210]/10 text-[#141210] dark:bg-[#C8A25A]/20 dark:text-[#E5C888]">
+                  <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-[#181511]/10 text-[#181511] dark:bg-[#C8A25A]/20 dark:text-[#E5C888]">
                     ${esc(p.area_direito)} • ${esc(p.tribunal)} • ${esc(p.grau_jurisdicao || '1º Grau')}
                   </span>
                   <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-2">${esc(p.titulo_acao)}</h2>
@@ -4575,7 +4683,7 @@
                 </div>
                 <div class="text-right">
                   <div class="text-[11px] uppercase font-bold text-slate-400">Etapa Atual</div>
-                  <div class="mt-1 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#141210] text-[#E5C888] text-xs font-extrabold">
+                  <div class="mt-1 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#181511] text-[#E5C888] text-xs font-extrabold">
                     <i data-lucide="check-circle-2" class="w-4 h-4"></i> ${esc(p.fase_pipeline)}
                   </div>
                 </div>
@@ -4597,7 +4705,7 @@
               <!-- Andamentos + Botão/Card "O que isto quer dizer?" -->
               <div class="space-y-4">
                 <h3 class="text-sm font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-                  <i data-lucide="clock" class="w-4 h-4 text-[#141210]"></i>
+                  <i data-lucide="clock" class="w-4 h-4 text-[#181511]"></i>
                   Passo a Passo e Últimas Movimentações do seu Processo (${movs.length} etapas)
                 </h3>
 
@@ -4608,7 +4716,7 @@
                     <div class="p-5 rounded-2xl border border-stone-200 dark:border-slate-800 bg-stone-50/50 dark:bg-slate-800/30 space-y-4">
                       <div class="flex flex-wrap items-center justify-between gap-2">
                         <div class="flex flex-wrap items-center gap-2">
-                          <span class="px-2.5 py-0.5 rounded-full bg-[#C8A25A] text-[#060505] text-[10px] font-extrabold">Passo ${stepNum} de ${movs.length}</span>
+                          <span class="px-2.5 py-0.5 rounded-full bg-[#C8A25A] text-[#060504] text-[10px] font-extrabold">Passo ${stepNum} de ${movs.length}</span>
                           <span class="text-xs font-bold text-slate-500"><i data-lucide="calendar" class="w-3 h-3 inline -mt-0.5 mr-1"></i> ${fmtDateTime(a.data_hora)}</span>
                         </div>
                         <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-stone-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200">${esc(a.etapa_pipeline || p.fase_pipeline)}</span>
@@ -4616,7 +4724,7 @@
 
                       <div>
                         <h4 class="text-base font-extrabold text-slate-900 dark:text-white">${esc(a.titulo_movimento)}</h4>
-                        ${a.orgao_julgador ? `<div class="text-[11px] font-semibold text-[#141210] dark:text-[#E5C888] mt-0.5"><i data-lucide="landmark" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> Setor / Vara: ${esc(a.orgao_julgador)}</div>` : ''}
+                        ${a.orgao_julgador ? `<div class="text-[11px] font-semibold text-[#181511] dark:text-[#E5C888] mt-0.5"><i data-lucide="landmark" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> Setor / Vara: ${esc(a.orgao_julgador)}</div>` : ''}
                         <p class="text-xs text-slate-500 mt-1">${esc(a.descricao_tecnica)}</p>
                       </div>
 
@@ -4624,25 +4732,25 @@
                       <div class="rounded-2xl bg-[#FAF8F5] dark:bg-slate-800/90 border border-[#C8A25A]/40 p-4 shadow-2xs">
                         <div class="flex flex-wrap items-center justify-between gap-2">
                           <div class="flex items-center gap-2.5">
-                            <span class="w-8 h-8 rounded-xl bg-[#141210] text-[#E5C888] flex items-center justify-center">
+                            <span class="w-8 h-8 rounded-xl bg-[#181511] text-[#E5C888] flex items-center justify-center">
                               <i data-lucide="info" class="w-4 h-4"></i>
                             </span>
                             <div>
-                              <span class="text-xs font-extrabold uppercase tracking-wider text-[#141210] dark:text-[#E5C888]">
+                              <span class="text-xs font-extrabold uppercase tracking-wider text-[#181511] dark:text-[#E5C888]">
                                 Entenda este andamento
                               </span>
                               <div class="text-[11px] text-slate-500">Esclarecimento em linguagem simples do Dr. Darcy Luiz</div>
                             </div>
                           </div>
                           <button type="button" onclick="document.getElementById('ia-exp-${a.id}').classList.toggle('hidden')"
-                            class="px-3 py-1.5 rounded-xl border border-[#C8A25A]/50 bg-white dark:bg-slate-900 text-[#141210] dark:text-[#E5C888] text-[11px] font-bold hover:bg-[#FDF8EE] transition">
+                            class="px-3 py-1.5 rounded-xl border border-[#C8A25A]/50 bg-white dark:bg-slate-900 text-[#181511] dark:text-[#E5C888] text-[11px] font-bold hover:bg-[#FDF8EE] transition">
                             Ver / Ocultar Explicação
                           </button>
                         </div>
                         <div id="ia-exp-${a.id}" class="mt-3 pt-3 border-t border-[#C8A25A]/25 text-xs sm:text-sm text-slate-800 dark:text-slate-100 leading-relaxed font-medium space-y-2">
                           <div>${esc(a.explicacao_leiga)}</div>
                           ${a.proximo_passo_leigo ? `
-                            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/70 border border-[#C8A25A]/30 text-xs text-[#141210] dark:text-[#E5C888]">
+                            <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/70 border border-[#C8A25A]/30 text-xs text-[#181511] dark:text-[#E5C888]">
                               <i data-lucide="compass" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> <strong>Qual é o próximo passo?</strong> ${esc(a.proximo_passo_leigo)}
                             </div>
                           ` : ''}
@@ -4662,9 +4770,9 @@
 
                         <div class="flex flex-col sm:flex-row gap-2 pt-1">
                           <input id="input-duvida-${a.id}" type="text" placeholder="Ficou com alguma dúvida sobre este andamento? Escreva aqui para o Dr. Darcy Luiz..."
-                            class="flex-1 px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#141210]">
+                            class="flex-1 px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs focus:outline-none focus:ring-2 focus:ring-[#181511]">
                           <button type="button" onclick="enviarDuvidaCliente('${a.id}')"
-                            class="px-4 py-2.5 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold shrink-0 flex items-center justify-center gap-1.5">
+                            class="px-4 py-2.5 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold shrink-0 flex items-center justify-center gap-1.5">
                             <i data-lucide="send" class="w-3.5 h-3.5"></i> Enviar Dúvida
                           </button>
                         </div>
@@ -4686,7 +4794,7 @@
         docsList.innerHTML = APP.portal.anexos.map(a => `
           <div class="p-4 rounded-2xl border border-stone-200 dark:border-slate-800 bg-stone-50/60 dark:bg-slate-800/40 flex items-center justify-between gap-3">
             <div class="flex items-center gap-3 min-w-0">
-              <div class="w-10 h-10 rounded-xl bg-[#141210] text-[#E5C888] flex items-center justify-center shrink-0">
+              <div class="w-10 h-10 rounded-xl bg-[#181511] text-[#E5C888] flex items-center justify-center shrink-0">
                 <i data-lucide="file-check-2" class="w-5 h-5"></i>
               </div>
               <div class="min-w-0">
@@ -4695,7 +4803,7 @@
               </div>
             </div>
             <button type="button" onclick="openAnexo('${a.id}')"
-              class="px-3.5 py-2 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold flex items-center gap-1.5 shrink-0">
+              class="px-3.5 py-2 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold flex items-center gap-1.5 shrink-0">
               <i data-lucide="download" class="w-3.5 h-3.5"></i> Baixar PDF
             </button>
           </div>
@@ -4840,7 +4948,7 @@
           </div>
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Salvar Cliente</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Salvar Cliente</button>
           </div>
         </form>
       `);
@@ -5009,7 +5117,7 @@
           </div>
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Salvar Processo</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Salvar Processo</button>
           </div>
         </form>
       `);
@@ -5139,7 +5247,7 @@
               </div>
               <div class="flex items-center pt-5">
                 <label class="flex items-center gap-2 font-bold cursor-pointer">
-                  <input type="checkbox" id="f-and-visivel" ${a.visivel_cliente ? 'checked' : ''} class="w-4 h-4 accent-[#141210]">
+                  <input type="checkbox" id="f-and-visivel" ${a.visivel_cliente ? 'checked' : ''} class="w-4 h-4 accent-[#181511]">
                   Disponibilizar imediatamente no Portal do Cliente
                 </label>
               </div>
@@ -5172,18 +5280,18 @@
 
             <div class="p-4 rounded-2xl bg-[#FAF8F5] dark:bg-slate-800 border border-[#C8A25A]/40 space-y-2">
               <div class="flex items-center justify-between">
-                <label class="font-extrabold text-[#141210] dark:text-[#E5C888] flex items-center gap-1.5">
+                <label class="font-extrabold text-[#181511] dark:text-[#E5C888] flex items-center gap-1.5">
                   <i data-lucide="message-square-text" class="w-4 h-4"></i>
                   Esclarecimento ao Cliente (Linguagem Acessível):
                 </label>
-                <button type="button" onclick="autoPreviewTranslation(true)" class="px-2.5 py-1 rounded-lg bg-[#141210] text-[#E5C888] text-[10px] font-bold">
+                <button type="button" onclick="autoPreviewTranslation(true)" class="px-2.5 py-1 rounded-lg bg-[#181511] text-[#E5C888] text-[10px] font-bold">
                   Sugerir Redação Clara
                 </button>
               </div>
               <textarea id="f-and-leiga" rows="2" placeholder="Explicação clara e humana para o cliente compreender o andamento..."
                 class="w-full px-3 py-2 rounded-xl border border-[#C8A25A]/50 bg-white dark:bg-slate-900 text-xs">${esc(a.explicacao_leiga)}</textarea>
               <div>
-                <label class="font-bold block mb-1 text-[#141210] dark:text-[#E5C888]"><i data-lucide="compass" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> Qual é o Próximo Passo? (Explicação para o Cliente)</label>
+                <label class="font-bold block mb-1 text-[#181511] dark:text-[#E5C888]"><i data-lucide="compass" class="w-3.5 h-3.5 inline -mt-0.5 mr-1"></i> Qual é o Próximo Passo? (Explicação para o Cliente)</label>
                 <input id="f-and-prox-passo" value="${esc(a.proximo_passo_leigo || '')}" placeholder="Ex: O Dr. Darcy Luiz apresentará a manifestação dentro do prazo legal."
                   class="w-full px-3 py-2 rounded-xl border border-[#C8A25A]/50 bg-white dark:bg-slate-900 text-xs">
               </div>
@@ -5192,7 +5300,7 @@
 
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Salvar e Publicar</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Salvar e Publicar</button>
           </div>
         </form>
       `);
@@ -5297,7 +5405,7 @@
           </div>
           <div class="flex justify-end gap-2">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Salvar Resposta</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Salvar Resposta</button>
           </div>
         </form>
       `);
@@ -5395,7 +5503,7 @@
             ${t.id ? `<button type="button" onclick="closeModal(); deleteRecordById('legal_tarefas_kanban', '${t.id}');" class="text-xs font-bold text-rose-600">Excluir Cartão</button>` : '<span></span>'}
             <div class="flex gap-2">
               <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-              <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Salvar Cartão</button>
+              <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Salvar Cartão</button>
             </div>
           </div>
         </form>
@@ -5504,7 +5612,7 @@
           </div>
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Gerar Parcelas</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Gerar Parcelas</button>
           </div>
         </form>
       `);
@@ -5633,7 +5741,7 @@
           </div>
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Salvar</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Salvar</button>
           </div>
         </form>
       `);
@@ -5702,7 +5810,7 @@
           </div>
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border text-xs font-bold">Cancelar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] text-white text-xs font-bold">Salvar Credencial</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] text-white text-xs font-bold">Salvar Credencial</button>
           </div>
         </form>
       `);
@@ -5746,7 +5854,7 @@
 
     // Inicialização automática
     window.addEventListener('DOMContentLoaded', () => {
-      if (localStorage.getItem('dl_darcy_dark') === '1') {
+      if (localStorage.getItem('dl_darcy_dark') !== '0') {
         document.documentElement.classList.add('dark');
       }
       refreshIcons();
@@ -5759,7 +5867,7 @@
       openModal('Gerenciar Multi-Cofre Gratuito (Soma de Cofres 1 GB + 15 GB Drive)', `
         <form onsubmit="saveMultiVaultConfig(event)" class="space-y-4">
           <div class="p-3.5 rounded-xl bg-[#FDF8EE] dark:bg-slate-800 border border-[#C8A25A]/40 text-xs text-slate-700 dark:text-slate-200 space-y-1.5">
-            <div class="font-extrabold text-[#141210] dark:text-[#E5C888]">Como funciona a Opção 1 (Capacidade Ilimitada Sem Cartão):</div>
+            <div class="font-extrabold text-[#181511] dark:text-[#E5C888]">Como funciona a Opção 1 (Capacidade Ilimitada Sem Cartão):</div>
             <div>1. <strong>Compressão Automática Ativa:</strong> Fotos de documentos enviadas pelo celular são reduzidas em até 95% automaticamente (fazendo 1 GB guardar até 10.000 páginas).</div>
             <div>2. <strong>Google Drive Híbrido (+15 GB):</strong> Na ficha do cliente, use o botão <em>Link Google Drive (+15 GB)</em> para anexar processos gigantes sem gastar 1 byte do cofre interno.</div>
             <div>3. <strong>Soma de Cofres Supabase (+1 GB cada, sem cartão):</strong> Quando quiser somar mais +1 GB interno, crie um projeto grátis no Supabase, crie um bucket chamado <code>legal-docs</code> e cole a URL e a chave abaixo:</div>
@@ -5799,7 +5907,7 @@
 
           <div class="flex justify-end gap-2 pt-3 border-t border-stone-200 dark:border-slate-800">
             <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl border border-stone-300 text-xs font-bold">Fechar</button>
-            <button type="submit" class="px-5 py-2 rounded-xl bg-[#141210] hover:bg-[#0B0A09] text-white text-xs font-bold">+ Conectar Cofre de 1 GB</button>
+            <button type="submit" class="px-5 py-2 rounded-xl bg-[#181511] hover:bg-[#0D0B09] text-white text-xs font-bold">+ Conectar Cofre de 1 GB</button>
           </div>
         </form>
       `);
