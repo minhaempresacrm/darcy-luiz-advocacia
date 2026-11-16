@@ -1,5 +1,5 @@
 /**
- * Nathalia Lisboa Advocacia — Cloudflare Edge Security & DataJud Proxy Worker
+ * Darcy Luiz Advocacia — Cloudflare Edge Security & DataJud Proxy Worker
  * Plano: Cloudflare Workers Free (R$ 0,00/mês)
  * Recursos:
  *  1. OWASP Hardened Security Headers (CSP, HSTS, X-Frame-Options, nosniff, Permissions-Policy)

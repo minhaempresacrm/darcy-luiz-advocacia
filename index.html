@@ -394,7 +394,6 @@
       color: #F8FAFC !important;
     }
 
-    /* Cards brancos puríssimos no modo claro com borda safira sutil e leitura ultra descansada */
     .nl-bento-card,
     .admin-view > div.bg-white,
     .admin-view .grid > div.bg-white,
@@ -412,7 +411,6 @@
       border-color: rgba(56, 189, 248, 0.25) !important;
     }
 
-    /* Etapas ativas da Pipeline em Preto Carbono & Azul Safira */
     .nl-pipeline-track {
       background: linear-gradient(180deg, #EBF1F8 0%, #E2E8F0 100%) !important;
       border: 1px solid rgba(37, 99, 235, 0.22) !important;
@@ -429,7 +427,6 @@
       box-shadow: 0 10px 22px -6px rgba(29, 78, 216, 0.45) !important;
     }
 
-    /* Botão Principal de Login em Preto Carbono & Azul Safira Real */
     #btn-login-submit {
       background: linear-gradient(135deg, #090D16 0%, #1E3A8A 55%, #2563EB 100%) !important;
       color: #FFFFFF !important;
@@ -725,7 +722,7 @@
       </div>
     </aside>
 
-    <!-- Conteúdo Principal da Advogada -->
+    <!-- Conteúdo Principal do Advogado -->
     <main class="flex-1 w-full min-w-0 overflow-x-hidden min-h-screen">
       <!-- Barra Superior Desktop (Liquid Glass + Hierarquia Editorial) -->
       <div class="sticky top-0 z-20 bg-[#F3F6FB]/88 dark:bg-slate-950/88 backdrop-blur-xl border-b border-[#2563EB]/30 dark:border-slate-800 px-4 sm:px-8 py-3.5 flex flex-wrap items-center justify-between gap-3 shadow-[0_4px_20px_-6px_rgba(62,14,16,0.05)]">
@@ -1233,7 +1230,7 @@
         </div>
 
         <div class="flex items-center gap-2.5">
-          <a id="client-header-whatsapp" href="https://wa.me/5521981801373" target="_blank" rel="noopener"
+          <a id="client-header-whatsapp" href="https://wa.me/5521999999999" target="_blank" rel="noopener"
             class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition">
             <i data-lucide="message-circle" class="w-4 h-4"></i> Falar com o Escritório
           </a>
@@ -1290,7 +1287,7 @@
         <div id="portal-processos-container" class="space-y-6"></div>
       </div>
 
-      <!-- ABA 2 DO CLIENTE: DOCUMENTOS DISPONIBILIZADOS PELA ADVOGADA -->
+      <!-- ABA 2 DO CLIENTE: DOCUMENTOS DISPONIBILIZADOS PELO ADVOGADO -->
       <div id="ctab-documentos" class="client-tab-pane hidden space-y-4">
         <div class="bg-white dark:bg-slate-900 rounded-3xl p-6 border border-stone-200/90 dark:border-slate-800 shadow-xs">
           <h2 class="text-base font-bold text-slate-900 dark:text-white mb-1">Documentos Disponibilizados pelo Dr. Darcy Luiz</h2>
@@ -1325,7 +1322,7 @@
     const SUPABASE_URL = 'https://zlnaushxdvuznlwmongk.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_U_vT8rFuKXlwF4_yUlfaUQ_WcXYtcbx';
     const DATAJUD_PUBLIC_API_KEY = 'cDZHYzlZa0JadVREZDJCendQbXY6SkJlTzNjLV9TRENyQk1RdnFKZGRQdw==';
-    let ESCRITORIO_WHATSAPP = '5521981801373';
+    let ESCRITORIO_WHATSAPP = '5521999999999';
 
     const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -1987,7 +1984,7 @@
     }
 
     // -------------------------------------------------------------------------
-    // CARREGAMENTO DE DADOS DO PAINEL DA ADVOGADA
+    // CARREGAMENTO DE DADOS DO PAINEL DO ADVOGADO
     // -------------------------------------------------------------------------
     async function loadAdminBundle() {
       const { data, error } = await sb.rpc('legal_get_admin_bundle', { p_token: APP.token });
@@ -2782,7 +2779,7 @@
           </div>
         </div>
 
-        <!-- Notas Internas Sigilosas da Advogada -->
+        <!-- Notas Internas Sigilosas do Advogado -->
         <div class="p-3.5 rounded-2xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/40 mb-5">
           <div class="flex items-center justify-between text-[11px] font-bold text-amber-900 dark:text-amber-300 mb-1">
             <span class="flex items-center gap-1.5"><i data-lucide="lock" class="w-3.5 h-3.5"></i> Notas Estratégicas Internas (100% Sigiloso — Oculto do Cliente)</span>
@@ -2827,7 +2824,7 @@
                 <div class="flex items-center gap-2">
                   <button type="button" onclick="toggleAnexoVisibilidade('${a.id}')"
                     class="px-2.5 py-1 rounded-lg text-[10px] font-bold border transition ${a.visivel_cliente ? 'bg-emerald-50 border-emerald-300 text-emerald-800' : 'bg-stone-200 border-stone-300 text-slate-600'}">
-                    ${a.visivel_cliente ? '<i data-lucide="eye" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Visível ao Cliente' : '<i data-lucide="lock" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Só Advogada'}
+                    ${a.visivel_cliente ? '<i data-lucide="eye" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Visível ao Cliente' : '<i data-lucide="lock" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Só Advogado'}
                   </button>
                   <button type="button" onclick="openAnexo('${a.id}')"
                     class="px-2.5 py-1 rounded-lg bg-[#1D4ED8] text-white text-[11px] font-bold flex items-center gap-1">
@@ -3985,7 +3982,7 @@
       if (!proc || !proc.id) return false;
       let changed = false;
 
-      // 1. Capa: preenche apenas campos VAZIOS com dados oficiais (nunca sobrescreve o que a advogada digitou)
+      // 1. Capa: preenche apenas campos VAZIOS com dados oficiais (nunca sobrescreve o que o advogado digitou)
       const patch = {};
       if (!proc.classe_processual && capa.classe_processual) patch.classe_processual = capa.classe_processual;
       if (!proc.assuntos_cnj && capa.assuntos_cnj && capa.assuntos_cnj !== proc.titulo_acao) patch.assuntos_cnj = capa.assuntos_cnj;
@@ -4743,7 +4740,7 @@
     function applyEscritorioBranding(escObj) {
       if (!escObj) return;
       if (escObj.whatsapp_oficial) {
-        ESCRITORIO_WHATSAPP = String(escObj.whatsapp_oficial).replace(/\D/g, '') || '5521981801373';
+        ESCRITORIO_WHATSAPP = String(escObj.whatsapp_oficial).replace(/\D/g, '') || '5521999999999';
       }
       if (escObj.cor_primaria) {
         document.documentElement.style.setProperty('--p-accent', escObj.cor_primaria);
@@ -4961,7 +4958,7 @@
           cli ? cli.nome : '',
           a.categoria || 'Documento',
           kb,
-          a.visivel_cliente ? 'Visivel ao Cliente' : 'Restrito Advogada',
+          a.visivel_cliente ? 'Visivel ao Cliente' : 'Restrito Advogado',
           linkByAnexoId[a.id] || ''
         ]);
       });
@@ -5089,7 +5086,7 @@
             <div>
               <div class="flex items-center justify-between gap-2">
                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase ${u.role === 'advogada' ? 'bg-[#1D4ED8] text-[#7DD3FC]' : 'bg-stone-200 dark:bg-slate-700 text-slate-800 dark:text-white'}">
-                  ${esc(u.role)}
+                  ${u.role === 'advogada' ? 'Advogado' : 'Cliente'}
                 </span>
                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold ${statusColor}">${esc(u.status)}</span>
               </div>
@@ -5508,7 +5505,7 @@
               <input id="f-cli-morada" value="${esc(c.morada)}" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800">
             </div>
             <div class="sm:col-span-2">
-              <label class="font-bold block mb-1 text-amber-800 dark:text-amber-300"><i data-lucide="lock" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Notas Internas da Advogada (Invisível ao Cliente)</label>
+              <label class="font-bold block mb-1 text-amber-800 dark:text-amber-300"><i data-lucide="lock" class="w-3 h-3 inline -mt-0.5 mr-1"></i> Notas Internas do Advogado (Invisível ao Cliente)</label>
               <textarea id="f-cli-notas" rows="2" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800">${esc(c.notas_internas)}</textarea>
             </div>
           </div>
@@ -5836,7 +5833,7 @@
                 <input id="f-and-orgao" value="${esc(a.orgao_julgador || '')}" placeholder="Ex: Gabinete do Juiz Titular" class="w-full px-3.5 py-2 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800">
               </div>
               <div>
-                <label class="font-bold block mb-1">Ação / Prazo para a Advogada (Opcional — cria Kanban)</label>
+                <label class="font-bold block mb-1">Ação / Prazo para o Advogado (Opcional — cria Kanban)</label>
                 <input id="f-and-prazo" value="${esc(a.prazo_sugerido || '')}" placeholder="Ex: Protocolar Réplica em 15 dias úteis" class="w-full px-3.5 py-2 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800">
               </div>
             </div>
@@ -5931,7 +5928,7 @@
         });
       }
 
-      // Se a advogada preencheu uma providência/prazo no andamento, cria tarefa automática no Kanban!
+      // Se o advogado preencheu uma providência/prazo no andamento, cria tarefa automática no Kanban!
       if (prazoSug && !rec.id) {
         await sb.rpc('legal_save_record', {
           p_token: APP.token,
@@ -6369,7 +6366,7 @@
             <div>
               <label class="font-bold block mb-1">Vincular ao Cliente do CRM</label>
               <select id="f-usr-cli" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 dark:border-slate-700 bg-stone-50 dark:bg-slate-800">
-                <option value="">Acesso Interno (Advogada)</option>
+                <option value="">Acesso Interno (Advogado)</option>
                 ${APP.admin.clientes.map(c => `<option value="${c.id}" ${c.id === u.cliente_id ? 'selected' : ''}>${esc(c.nome)}</option>`).join('')}
               </select>
             </div>

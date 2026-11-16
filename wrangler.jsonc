@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "nathalia-lisboa-legaltech",
+  "name": "darcy-luiz-legaltech",
   "main": "worker.js",
   "compatibility_date": "2026-11-06",
   "observability": {
